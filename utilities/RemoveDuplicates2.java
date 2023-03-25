@@ -13,6 +13,6 @@ public class RemoveDuplicates2 {
             }
             result += str.charAt(i);
         }
-        System.out.println(result);
+        System.out.println(result.toUpperCase());
     }
 }
