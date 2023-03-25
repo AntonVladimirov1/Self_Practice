@@ -1,10 +1,10 @@
-package day15_WhileLoop;
+package utilities;
 
 public class RemoveDuplicates2 {
     public static void main(String[] args) {
 
         String str = "ssttrriinngggg";
-        String result ="";
+        String result = "";
 
         for (int i = 0; i < str.length(); i++) {
 
