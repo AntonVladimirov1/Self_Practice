@@ -1,4 +1,4 @@
-package day20_Array_forEach;
+package Self_Training;
 
 public class Sample {   // Haha ....Good advise!!!
     public static void main(String[] args) {

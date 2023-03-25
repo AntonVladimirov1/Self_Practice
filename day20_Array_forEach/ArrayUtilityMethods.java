@@ -43,8 +43,5 @@ public class ArrayUtilityMethods {
         Arrays.sort(v1);
         System.out.println(Arrays.toString(v1));
 
-
-
-
     }
 }
