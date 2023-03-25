@@ -43,7 +43,7 @@ public class StringMethods {
         System.out.println(Arrays.toString(n3));
         System.out.println("===============================================");
 
-        char[] ch1 = {'A','B','C','D','E','F','G'};
+        char[] ch1 = {'A','B','C','D','E','F','G'};                  //copy range
         char[] result1 = Arrays.copyOfRange(ch1,1,4);
         System.out.println(Arrays.toString(result1));
 
