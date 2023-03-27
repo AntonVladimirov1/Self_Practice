@@ -6,6 +6,7 @@ public class Array_Moth_byNumber {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
         System.out.println("Enter the moth number 1-12");
         int month = input.nextInt();
 
