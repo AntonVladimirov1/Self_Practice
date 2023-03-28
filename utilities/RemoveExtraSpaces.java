@@ -1,4 +1,4 @@
-package day20_Array_forEach;
+package utilities;
 
 import java.util.Arrays;
 
