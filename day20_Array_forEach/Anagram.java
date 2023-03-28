@@ -21,6 +21,5 @@ public class Anagram {
         boolean isAnagram = Arrays.equals(word1,word2);
         System.out.println("isAnagram = "+isAnagram);
 
-
     }
 }
