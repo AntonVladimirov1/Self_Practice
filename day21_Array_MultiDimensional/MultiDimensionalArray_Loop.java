@@ -15,7 +15,14 @@ public class MultiDimensionalArray_Loop {
                  int eachElement = each1D[j];
                 System.out.println(eachElement);
             }
+        }
+        System.out.println("=====================================");
 
+        for(int[] each1DArray : arr2D){
+            System.out.println(Arrays.toString(each1DArray));
+            for(int eachElement : each1DArray) {
+                System.out.println(eachElement);
+            }
         }
 
     }
