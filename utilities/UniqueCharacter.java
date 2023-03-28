@@ -15,8 +15,9 @@ public class UniqueCharacter {
                     frequency++;                          // increase the frequency by 1
                 }
             }
-            if (frequency ==1){                           // if it is ==1, then it's unique
-                unique+= ch;
+            if (frequency ==1){   // if it is ==1, then it's unique
+
+                unique += ch;
             }
         }
         System.out.println(unique);
