@@ -22,7 +22,7 @@ public class Array_Reverse {
         System.out.println("====================================================");
 
         int[] nums = {10,20,30,40,50,60,70,80,90,100};
-        nums = ArraysReverse.reverse(nums);
+        nums = ArraysReverse.reverse(nums); // calling stored method
         System.out.println(Arrays.toString(nums));
 
     }
