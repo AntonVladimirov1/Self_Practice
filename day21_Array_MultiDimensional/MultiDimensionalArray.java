@@ -1,5 +1,7 @@
 package day21_Array_MultiDimensional;
 
+import java.util.Arrays;
+
 public class MultiDimensionalArray {
     public static void main(String[] args) {
 
@@ -12,6 +14,7 @@ public class MultiDimensionalArray {
         System.out.println(arr2D.length);
 
         System.out.println(arr2D[1][2]); // to return single element of the specific single array
+        System.out.println(Arrays.deepToString(arr2D)); //method to just print MultiDim array!!!!!!!!!!
 
     }
 }
