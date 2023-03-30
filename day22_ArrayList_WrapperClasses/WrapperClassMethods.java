@@ -7,15 +7,14 @@ public class WrapperClassMethods {
         System.out.println(str +1);
         System.out.println("=======================");
 
-                                      // parse Method
+                                      // parse Method - returns primitive type, coverts String to primitive values
         // Integer num1 = Integer.parseInt(str); // unboxing
         int num = Integer.parseInt(str);
         System.out.println(num +1);
         System.out.println("=======================");
-
-                                     // valueOf Method
+                                     // valueOf Method - returns wrapper class objects, converts String to wrapper class values
         Integer num2 = Integer.valueOf(str);
-        System.out.println(num2);
+        System.out.println(num2+1);
         System.out.println("=======================");
 
         String s = "20.5";
