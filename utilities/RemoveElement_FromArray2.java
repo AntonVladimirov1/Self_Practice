@@ -10,4 +10,5 @@ public class RemoveElement_FromArray2 {
         array = Arrays.copyOf(array, array.length - 1);
         return array;
     }
+    // if enter out of bond index - method removes last index in array
 }
