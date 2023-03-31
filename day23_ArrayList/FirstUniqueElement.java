@@ -37,7 +37,7 @@ public class FirstUniqueElement {
             }
             if (frequency ==1){
                 System.out.println(element);
-                // break;  - exiting the loop when found first unique element
+                 break;  // <- exiting the loop when found first unique element
             }
         }
 
