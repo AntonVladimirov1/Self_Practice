@@ -12,7 +12,7 @@ public class ArrayListMethods1 {
         list.add(10);
         list.add(30);
         list.add(70);
-        list.add(1,50); // inserting another element in 1 index place
+        list.add(1,50); //* inserting another element in 1 index place
         System.out.println(list);
         System.out.println("=====================================");
                         /// GET method - to get(print) chosen elements from ArrayList
@@ -34,7 +34,7 @@ public class ArrayListMethods1 {
         boolean hasKolya = student.contains("Kolya");
         System.out.println(hasMasha+" / "+hasKolya);
         System.out.println("=======================================");
-
+                       /// EQUALS method - can compare two ArrayList for exact match
 
     }
 }
