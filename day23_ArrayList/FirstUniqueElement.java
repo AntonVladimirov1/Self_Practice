@@ -17,7 +17,7 @@ public class FirstUniqueElement {
         list.add(5);
         list.add(6);
         System.out.println(list);
-            // to find how many times chosen element repeated
+            /// to find how many times chosen element repeated
         /*int element = 1;
         int frequency = 0;
         for (Integer each : list) {
@@ -37,7 +37,7 @@ public class FirstUniqueElement {
             }
             if (frequency ==1){
                 System.out.println(element);
-                 break;  // <- exiting the loop when found first unique element
+                 break;  /// <- exiting the loop when found first unique element
             }
         }
 

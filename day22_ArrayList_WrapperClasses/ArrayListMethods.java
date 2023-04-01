@@ -6,8 +6,8 @@ public class ArrayListMethods {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
-                   // ADD method
-        list.add(10);   // adding elements to ArrayList
+                   /// ADD method - adding elements to ArrayList
+        list.add(10);
         list.add(20);
         list.add(10);
         list.add(30);
@@ -15,7 +15,7 @@ public class ArrayListMethods {
         list.add(1,50); // inserting another element in 1 index place
         System.out.println(list);
         System.out.println("=====================================");
-                        // GET method
+                        /// GET method - to get(print) chosen elements from ArrayList
         ArrayList<String> student = new ArrayList<>();
         student.add("Vasya");
         student.add("Petya");
