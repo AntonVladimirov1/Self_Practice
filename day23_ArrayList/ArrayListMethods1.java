@@ -1,8 +1,8 @@
-package day22_ArrayList_WrapperClasses;
+package day23_ArrayList;
 
 import java.util.ArrayList;
 
-public class ArrayListMethods {
+public class ArrayListMethods1 {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
@@ -28,6 +28,11 @@ public class ArrayListMethods {
         System.out.println(firstStudent);
         String lastStudent = student.get(student.size()-1);
         System.out.println(lastStudent);
+        System.out.println("=======================================");
+                       /// CONTAINS mehtod - to check if ArrayList contains element
+        boolean hasMasha = student.contains("Masha");
+        boolean hasKolya = student.contains("Kolya");
+        System.out.println(hasMasha+" / "+hasKolya);
 
     }
 }
