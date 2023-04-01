@@ -33,6 +33,8 @@ public class ArrayListMethods1 {
         boolean hasMasha = student.contains("Masha");
         boolean hasKolya = student.contains("Kolya");
         System.out.println(hasMasha+" / "+hasKolya);
+        System.out.println("=======================================");
+
 
     }
 }
