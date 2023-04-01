@@ -23,7 +23,7 @@ public class RemoveDuplicates {
             nonDup.add(each);
         }
         System.out.println(nonDup);
-        //*names=nonDup; System.out.println(names); - can be reassigned to a new ArrayList
+        ///names=nonDup; System.out.println(names); - can be reassigned to a new ArrayList
 
     }
 }
