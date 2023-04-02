@@ -3,7 +3,7 @@ package Live_Sessions;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SumDigits {
+public class SumDigits_InStringArrayList {
     public static void main(String[] args) {
 
         ArrayList<String> digits = new ArrayList<>(Arrays.asList("123","52","513","1842"));
