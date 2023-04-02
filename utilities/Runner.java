@@ -1,16 +1,18 @@
 package utilities;
 
-import java.util.Scanner;
+import Live_Sessions.CountChar_Method;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Runner {
     public static void main(String[] args) {
 
-        Scanner input =new Scanner(System.in);
-        System.out.println("Enter your word");
-        String word = input.next();
-        word.toLowerCase();
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("java","html","css","javascript","java"));
 
-        System.out.println(word.substring(2,word.length()-2));
+        System.out.println(CountChar_Method.countCharInList(list,'a'));
+        System.out.println(CountChar_Method.countCharInList(list,'j'));
+        System.out.println(CountChar_Method.countCharInList(list,'v'));
 
     }
 }
