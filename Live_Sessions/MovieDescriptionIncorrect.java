@@ -1,10 +1,10 @@
 package Live_Sessions;
 
-public class Lesson_1 {
+public class MovieDescriptionIncorrect {
     public static void main(String[] args) {
 
        //SWITCH:
-        String genre= "Action";
+        String genre= "jgjuyg";
         int pageLength=0, profit=0, sequels=0,countries=0;
 
         switch (genre){

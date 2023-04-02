@@ -2,12 +2,12 @@ package Live_Sessions;
 
 import java.util.Scanner;
 
-public class Sunday03_05_3 {
+public class SpaceIndex {
     public static void main(String[] args) {
 
         Scanner input =new Scanner(System.in);
 
-        System.out.println("Please enter your first name:");
+        System.out.println("Please enter your full name:");
         String name = input.nextLine(); // james bond
         name =name.toLowerCase();
         int spaceIndex =name.indexOf(" "); // 5

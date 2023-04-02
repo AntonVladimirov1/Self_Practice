@@ -1,13 +1,16 @@
 package utilities;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
 
-        int[] letter ={1,2,3,4,5,6};
-        int[] number = RemoveElement_FromArray.remove(letter,5);
-        System.out.println(Arrays.toString(number));
+        Scanner input =new Scanner(System.in);
+        System.out.println("Enter your word");
+        String word = input.next();
+        word.toLowerCase();
+
+        System.out.println(word.substring(2,word.length()-2));
 
     }
 }

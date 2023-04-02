@@ -2,12 +2,13 @@ package Live_Sessions;
 
 import java.util.Scanner;
 
-public class Sunday03_05_2 {
+public class MiddlePartOfWord {
     public static void main(String[] args) {
         // to determine first and last char
 
         Scanner input =new Scanner(System.in);
         //String word ="java"; - hard coded
+        System.out.println("Enter your word:");
           String word = input.next();
           char first = word.charAt(0);
           char last = word.charAt(word.length()-1);

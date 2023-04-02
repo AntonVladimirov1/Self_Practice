@@ -2,7 +2,7 @@ package Live_Sessions;
 
 import java.util.Scanner;
 
-public class Sunday03_05_1 {
+public class CentsToDollars {
     public static void main(String[] args) {
 
         Scanner input =new Scanner(System.in);

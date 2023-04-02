@@ -1,9 +1,9 @@
 package Live_Sessions;
 
-public class Lesson_2 {
+public class MovieDescription {
     public static void main(String[] args) {
 
-        String genre = "Action";
+        String genre = "Fantasy";
         int pageLength = 0, profit = 0, sequels = 0, countries = 0;
         boolean isValid = true;
 
@@ -26,7 +26,7 @@ public class Lesson_2 {
 
         }
         if (isValid) {
-            String message = "The " + genre + " genre usually has profits of $" + profit + " being sold in " + countries + " different countries. The " + genre + " books often have " + sequels + " squeals with each book roughly being around " + pageLength + " pages.";
+            String message = "The " + genre + " genre usually has profits of $" + profit + " being sold in " + countries + " different countries. The " + genre + " books often have " + sequels + " sequels with each book roughly being around " + pageLength + " pages.";
             System.out.println(message);
         }else {
             System.out.println("Sorry we don't have information for the " + genre + " genre");
