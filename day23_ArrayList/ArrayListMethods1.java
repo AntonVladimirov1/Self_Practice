@@ -1,17 +1,14 @@
 package day23_ArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListMethods1 {
     public static void main(String[] args) {
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(10,20,10,30,70));
                    /// ADD method - adding elements to ArrayList
-        list.add(10);
-        list.add(20);
-        list.add(10);
-        list.add(30);
-        list.add(70);
+
         list.add(1,50); //* inserting another element in 1 index place
         System.out.println(list);
         System.out.println("=====================================");
