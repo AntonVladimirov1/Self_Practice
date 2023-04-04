@@ -41,6 +41,19 @@ public class ArrayListEmployee {
             }
         }
         System.out.println("max = "+max+"\nmin = "+min);
+        System.out.println("=====================================================");
+
+        ArrayList<Employee> female = new ArrayList<>();
+        ArrayList<Employee> male = new ArrayList<>();
+
+        for (Employee employee : employees) {
+            if (employee.gender == 'M'){
+                male.add(employee);
+            }else {
+                female.add(employee);
+            }
+        }
+        System.out.println("female count: "+female.size()+"\nmale count: "+male.size());
     }
 }
 /* Note: Employee class is imported from day17 package
@@ -51,5 +64,5 @@ public class ArrayListEmployee {
 
 	        1.3 Write a program that can display the maximum and minimum salary
 
-	        1.4 Create two arraylists named femaleEmployees and maleEmployees, write a program that
-	         can add all the female employees and male employees to the femaleEmployees and maleEmployees arraylists */
+	        1.4 Create two arraylists named female and maleEmployees, write a program that
+	         can add all the female employees and male employees to the female and maleEmployees arraylists */
