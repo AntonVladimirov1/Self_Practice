@@ -1,6 +1,6 @@
 package day17_CustomClass;
 
-public class Employee_Custom_Class {
+public class Employee {
 
     public String name;
     public int age;
