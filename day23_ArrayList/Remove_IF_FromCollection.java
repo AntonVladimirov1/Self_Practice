@@ -5,7 +5,7 @@ import day17_CustomClass.Employee;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class RemoveElelmentsFromCollection {
+public class Remove_IF_FromCollection {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7));
