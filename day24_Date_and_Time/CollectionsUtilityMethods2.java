@@ -19,7 +19,7 @@ public class CollectionsUtilityMethods2 {
         System.out.println(names);
         System.out.println("===========================================================================");
                          /// Frequency mehtod
-        A
+
 
     }
 }
