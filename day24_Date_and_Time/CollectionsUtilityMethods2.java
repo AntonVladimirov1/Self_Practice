@@ -19,7 +19,24 @@ public class CollectionsUtilityMethods2 {
         System.out.println(names);
         System.out.println("===========================================================================");
                          /// Frequency mehtod
+        ArrayList<Integer> list =new ArrayList<>(Arrays.asList(10,20,20,30,40,50,50,50,50,60,60,50,50,60,50));
+        int count = Collections.frequency(list,50); // need to provide List name and element
+        System.out.println(count);     // how many times "50" repeats
+        System.out.println("===========================================================================");
 
+        ArrayList<String > words = new ArrayList<>(Arrays.asList("Java","Java","Java","C#","C#","Swift","Swift","Java","Ruby"));
+        int count1 = Collections.frequency(words,"Java");
+        System.out.println(count1);
+        System.out.println("===========================================================================");
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.addAll(Arrays.asList(10,20,20,30,40,50,50,50,50,60,60,50,50,60,50));
+
+        for (Integer each : numbers) {
+            if (Collections.frequency(numbers,each) == 1){
+                System.out.println(each);
+            }
+        }
 
     }
 }
