@@ -7,10 +7,10 @@ import java.util.Collections;
 public class CollectionsUtilityMethods1 {
     public static void main(String[] args) {
                     /// Min/Max methods
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(120,2,3,4,50,6,7,8,9,10,11,12,13));
         int max = Collections.max(list);
         int min = Collections.min(list);
-        System.out.println(min+" "+max);
+        System.out.println("Min: "+min+"\nMax: "+max);
         System.out.println("==================================================================");
                     /// Sort method - alphabet order
         ArrayList<String> girls = new ArrayList<>();

@@ -9,10 +9,14 @@ public class ArrayToArrayListConversion {
         ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7));
 
         Integer[] n = nums.toArray(nums.toArray(new Integer[0]));
+
         System.out.println(Arrays.toString(n));
+
                       /// Array to ArrayList
         String[] arr = {"h","u","j","l","o"};
+
         ArrayList<String> list =new ArrayList<>(Arrays.asList(arr));
+
         System.out.println(list);
 
     }

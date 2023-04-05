@@ -29,13 +29,13 @@ public class BulkOperations {
         ArrayList<String> names = new ArrayList<>();
         names.addAll(Arrays.asList("Masha","Katya","Olya","Kira"));
         System.out.println(names);
-        //* to add additional elements to the specific index of existing ArrayList
+                                               //* to add additional elements to the specific index of existing ArrayList
         names.addAll(2,Arrays.asList("Natasha","Lejla"));
         System.out.println(names);
         System.out.println("=======================================================");
-        //* adding elements of the Array to the ArrayList
+                                               //* adding elements of the Array to the ArrayList
         Integer[] nums = {1,2,3,4,5,6,7,8};
-        ArrayList<Integer> l1 =new ArrayList<>(Arrays.asList(nums)); //* second option
+        ArrayList<Integer> l1 =new ArrayList<>(Arrays.asList(nums));   //* second option
         //l1.addAll(Arrays.asList(nums)); //* first option
         System.out.println(l1);
         System.out.println("=======================================================");

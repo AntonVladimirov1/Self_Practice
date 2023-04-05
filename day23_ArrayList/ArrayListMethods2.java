@@ -16,17 +16,17 @@ public class ArrayListMethods2 {
         groceriestList.set(3,"Apple");
         System.out.println(groceriestList);
         System.out.println("=================================");
-              /// REMOVE method - opposite to ADD
-        groceriestList.remove(0);  /// by Index  or for Digits--(Integer.valueOf(10));
+              ///     REMOVE method - opposite to ADD
+        groceriestList.remove(0);  //* by Index  or for Digits--(Integer.valueOf(10));
         System.out.println(groceriestList);
-        groceriestList.remove("Onion");  /// by Object
+        groceriestList.remove("Onion");  //* by Object
         System.out.println(groceriestList);
         System.out.println("=================================");
-               /// CLEAR method - clearing the whole ArrayList
+               ///        CLEAR method - clearing the whole ArrayList
         groceriestList.clear();
         System.out.println(groceriestList);
         System.out.println("=================================");
-               /// IndexOf/lastIndexOf methods - returns fist occurance from the beggining/from the end
+               ///      IndexOf / lastIndexOf methods - returns fist occurance from the beggining/from the end
         ArrayList<String> names = new ArrayList<>();
         names.add("Vasya");
         names.add("Petya");

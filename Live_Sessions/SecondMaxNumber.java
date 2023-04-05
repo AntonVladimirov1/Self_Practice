@@ -11,9 +11,7 @@ public class SecondMaxNumber {
 
         int max = Integer.MIN_VALUE;
         int secondMax = Integer.MIN_VALUE;             //list.get(0);
-
         for (Integer each : list) {
-
             if (each > max){
                 secondMax = max;
                 max = each;

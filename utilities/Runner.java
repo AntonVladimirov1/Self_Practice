@@ -1,21 +1,24 @@
 package utilities;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Runner {
     public static void main(String[] args) {
 
-        int[] list = {1,2,3,4,5,5,4,3,2,9,7,2,};
-
-        int count =0;
-        for (int i = 0; i < list.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (list[i]==list[j]){
-                    count++;
-                }
-            }
-            if (count==1){
-                System.out.println();
+        ArrayList<Integer> list=new ArrayList<>(Arrays.asList(192,93,18,4,15,15,2,4,7,8,4,8,91,9,10,101));
+        Collections.sort(list);
+        int max=list.get(0);
+        int secondMax=list.get(0);
+        for (int each : list) {
+            if(each>max){
+                secondMax=max;
+                max=each;
             }
         }
+        System.out.println("Max = "+max);
+        System.out.println("Second max = "+secondMax);
 
 
     }

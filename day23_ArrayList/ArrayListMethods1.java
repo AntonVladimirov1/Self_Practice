@@ -9,7 +9,7 @@ public class ArrayListMethods1 {
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(10,20,10,30,70));
                    /// ADD method - adding elements to ArrayList
 
-        list.add(1,50); //* inserting another element in 1 index place
+        list.add(1,50);            //* inserting another element in 1 index place
         System.out.println(list);
         System.out.println("=====================================");
                         /// GET method - to get(print) chosen elements from ArrayList
