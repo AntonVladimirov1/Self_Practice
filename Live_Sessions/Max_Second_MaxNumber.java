@@ -3,7 +3,7 @@ package Live_Sessions;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SecondMaxNumber {
+public class Max_Second_MaxNumber {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(6,599,1,9,5,2,4,25,4,584,7,8,12));
