@@ -15,6 +15,9 @@ public class Test_PersonObject {
         people[3].setInfo("Niki",'M', LocalDate.of(1990,8,18));
         people[4].setInfo("Karina",'M', LocalDate.of(2002,6,29));
 
+        // print name & DOB of each person
+        // remove all people who age >30 // removeAll
+
 
         ArrayList<Person_CustomMethod> students = new ArrayList<>();
         students.addAll(Arrays.asList(people));
@@ -23,16 +26,11 @@ public class Test_PersonObject {
             System.out.println(each.name+" : "+each.dateOfBirth);
         }
         System.out.println("================================");
+
         students.removeIf(older->older.age >30);
         for (Person_CustomMethod each2 : students) {
             System.out.println(each2.name+" : "+each2.age);
         }
-
-
-
-        // print name & DOB of each person
-        // remove all people who age >30 // removeAll
-
 
     }
 }
