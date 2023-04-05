@@ -22,10 +22,10 @@ public class Test_Dog_Objects {
         dog2.color = "Gold";
 
         Dog_Custom_Class dog3 = new Dog_Custom_Class();
-        dog3.setInfo("Kuku","jhgj","kjgkj",'G',5,"kjgk");
+        dog3.setInfo("Kuku","jhgj",'M',5,"kjgkj","kjgk");
 
         Dog_Custom_Class dog4 = new Dog_Custom_Class();
-        dog4.setInfo("Chack","jhgj","jhgj",'J',6,"White");
+        dog4.setInfo("Chack","jhgj",'M',5,"jhgj","White");
 
         System.out.println(dog1);
         System.out.println(dog2);

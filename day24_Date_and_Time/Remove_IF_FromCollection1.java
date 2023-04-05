@@ -1,11 +1,11 @@
-package day23_ArrayList;
+package day24_Date_and_Time;
 
 import day17_CustomClass.Employee;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Remove_IF_FromCollection {
+public class Remove_IF_FromCollection1 {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7));
@@ -26,7 +26,7 @@ public class Remove_IF_FromCollection {
 
         names.removeIf(each-> each.startsWith("J"));
         System.out.println(names);
-        System.out.println("=====================================================");
+        System.out.println("===================================================================================");
 
         ArrayList<Employee> employees = new ArrayList<>();
         employees.addAll(Arrays.asList( new Employee(), new Employee(), new Employee(), new Employee(), new Employee()
