@@ -8,7 +8,7 @@ public class LocalDateIntro {
         LocalDate today = LocalDate.now(); //* "NOW" - current date
         System.out.println(today);
 
-        LocalDate birthday = LocalDate.of(1972,5,19); // "OF" - any date
+        LocalDate birthday = LocalDate.of(1972,5,19); //* "OF" - any date
         System.out.println(birthday);
         System.out.println("===============================================");
 
