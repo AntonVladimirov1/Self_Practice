@@ -3,7 +3,7 @@ package Live_Sessions;
 public class WrapperClass_HtmlGenerator {
     public static void main(String[] args) {
 
-        String input = "ul1;li3;button2";
+        String input = "div2;html3;button2";
 
         String[] arrayOfInput = input.split(";");
 
