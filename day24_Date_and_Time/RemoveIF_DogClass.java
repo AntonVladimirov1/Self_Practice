@@ -5,7 +5,7 @@ import day17_CustomClass.Dog_Custom_Class;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Remove_IF_FromCollection2 {
+public class RemoveIF_DogClass {
     public static void main(String[] args) {
 
         Dog_Custom_Class[] dogs = {new Dog_Custom_Class(), new Dog_Custom_Class(), new Dog_Custom_Class(), new Dog_Custom_Class(), new Dog_Custom_Class(), new Dog_Custom_Class()};
