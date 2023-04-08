@@ -1,6 +1,7 @@
 package day25_Constructor;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Employee_CustomClass {
 
@@ -22,12 +23,12 @@ public class Employee_CustomClass {
 
     public String toString() {
         return "Employee_CustomClass{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                ", jobTitle='" + jobTitle + '\'' +
-                ", salary=" + salary +
-                ", hired_Date=" + hired_Date +
+                "name ='" + name + '\'' +
+                ", age =" + age +
+                ", gender =" + gender +
+                ", jobTitle ='" + jobTitle + '\'' +
+                ", salary =" + salary +
+                ", hired_Date - " + hired_Date.format(DateTimeFormatter.ofPattern("MM/dd/y")) +
                 '}';
     }
 }

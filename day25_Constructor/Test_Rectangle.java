@@ -1,6 +1,6 @@
 package day25_Constructor;
 
-public class Test_Rectangle_Object {
+public class Test_Rectangle {
     public static void main(String[] args) {
 
       /*  Rectangle_CustomClass rectangle1 = new Rectangle_CustomClass();
