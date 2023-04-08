@@ -2,36 +2,25 @@ package utilities;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Runner {
     public static void main(String[] args) {
 
-        ArrayList<Integer> list = new ArrayList<>()
-;
-        list.addAll(Arrays.asList(1,2,3,4,5));
-        list.set(0, list.get(4));
-        list.set(4, list.get(0));
-        System.out.println(list);
-        System.out.println("==============================");
+        ArrayList<String> str =new ArrayList<>(Arrays.asList("Anna","Canada","Bob","David","Lan","Abida","Ezra","Farida"));
 
-        ArrayList<Character> list2 = new ArrayList<>();
+        str.removeIf(p-> p.endsWith(p.substring(0,1).toLowerCase()));
+        System.out.println(str);
 
-        for (char i = 'a'; i <= 'z' ; i++) {
-            list2.add(i);
-        }
-        boolean r = list2.containsAll(Arrays.asList('a','c','D'));
-        System.out.println(r);
-        System.out.println("=====================================");
+        System.out.println("=============================================");
 
-        ArrayList<Integer> nums =new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 1, -2, -2, -2, 3, 4, 5, 6, 7, 8, 8, 8, 8));
+        list.removeAll(Arrays.asList(Collections.max(list)));
+        list.removeAll(Arrays.asList(Collections.min(list)));
+        System.out.println("second Max number: " + Collections.max(list));
+        System.out.println("second Min number: " + Collections.min(list));
+        System.out.println("=============================================");
 
-        for (Integer each : nums) {
-            if (each%2 !=0){
-                continue;
-            }
-            System.out.println(each);
-            break;
-        }
 
     }
 }
