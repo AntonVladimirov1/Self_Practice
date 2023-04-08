@@ -21,10 +21,10 @@ public class Test_Rectangle {
         Rectangle_CustomClass rectangle5 = new Rectangle_CustomClass(7,4);
 
         System.out.println(rectangle1);
-        System.out.println(rectangle2);
-        System.out.println(rectangle3);
-        System.out.println(rectangle4);
-        System.out.println(rectangle5);
+       // System.out.println(rectangle2);
+       // System.out.println(rectangle3);
+        //System.out.println(rectangle4);
+        //System.out.println(rectangle5);
 
     }
 
