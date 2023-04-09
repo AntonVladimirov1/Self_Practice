@@ -1,6 +1,7 @@
 package day26_Statics.StudentTask;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class StudentsGroup {
 
@@ -15,6 +16,9 @@ public class StudentsGroup {
     }
     public void addStudent(Student student){ //* this method takes one student and adds it to the ArrayList of the students
         students.add(student);
+    }
+    public void addStudent(Student[]students){ //* to add all students objects to ArrayList
+        this.students.addAll(Arrays.asList(students));
     }
     public void addStudent(String name,int age,char gender,String id){ //* this method same but takes all arguments of student info and creates student object, then adds the student object to the ArrayList
        // Student student = new Student(name,age,gender,id);
