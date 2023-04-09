@@ -24,5 +24,11 @@ public class StudentsGroup {
         students.removeIf(p->p.id.equals(id));
     }
 
-
+    public String toString() {
+        return "\nStudentsGroup{" +
+                "groupName= '" + groupName + '\'' +
+                ", groupId= " + groupId +
+                ", number of students= " + students.size() +
+                '}';
+    }
 }
