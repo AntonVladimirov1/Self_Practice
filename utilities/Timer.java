@@ -17,7 +17,7 @@ public class Timer {
                 Thread.sleep(1000);
             }
         }
-        System.err.println("\n==> Time is UP <==");
+        System.err.println("==> Time is UP <==");
 
     }
 }
