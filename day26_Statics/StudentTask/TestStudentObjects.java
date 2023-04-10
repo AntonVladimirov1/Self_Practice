@@ -21,7 +21,6 @@ public class TestStudentObjects {
         group1.addStudent(student4);
         group1.addStudent(student5);
         System.out.println(group1);
-        System.out.println();
         System.out.println("=======================================================================");
 
         group1.removeStudent("A21");
@@ -31,6 +30,17 @@ public class TestStudentObjects {
             System.out.println(each.name+" / "+ each.id);
         }
         System.out.println("========================================================================");
+
+        StudentsGroup group2 = new StudentsGroup("Good",2);
+        StudentsGroup group3 = new StudentsGroup("Super",3);
+        StudentsGroup group4 = new StudentsGroup("Super++",4);
+
+        StudentsGroup[] groups ={group1,group2,group3,group4};
+        for (StudentsGroup each : groups) {
+            System.out.println(each);
+        }
+
+
 
 
     }

@@ -21,7 +21,7 @@ public class StudentsGroup {
         this.students.addAll(Arrays.asList(students));
     }
     public void addStudent(String name,int age,char gender,String id){ //* this method same but takes all arguments of student info and creates student object, then adds the student object to the ArrayList
-       // Student student = new Student(name,age,gender,id);
+       // Student students = new Student(name,age,gender,id);
         students.add(new Student(name,age,gender,id)); // can add strait here
     }
     public void removeStudent(String id){  //* this method takes specified ID and removes the student from ArrayList
