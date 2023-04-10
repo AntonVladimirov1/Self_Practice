@@ -19,7 +19,7 @@ public class Circle {
     }
 
     public String toString() {
-        return "\nCircle{" +
+        return "Circle{" +
                 "radius = " + radius +
                 ", diameter = " + diameter +
                 ", Perimeter = " + perimeter() +

@@ -15,5 +15,7 @@ public class TestIPhone {
         Circle second =new Circle(7);
         System.out.println(second);
 
+        System.out.println("Pi value = "+Circle.Pi);
+
     }
 }
