@@ -14,6 +14,6 @@ public class StaticBlock {
         new StaticBlock();
     }
     static {
-        System.out.println("Static block"); // initialize only one time
+        System.out.println("Static block"); //* initialize and executed only one time
     }
 }
