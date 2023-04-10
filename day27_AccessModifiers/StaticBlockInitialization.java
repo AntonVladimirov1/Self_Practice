@@ -6,7 +6,7 @@ public class StaticBlockInitialization {
     public static double b;
     public static String c;
 
-    static {            //* this block executed automatically when class called
+    static {            //* this Static initialization block executed automatically when class called
 
         a = 100;
         b = 20.5;
