@@ -8,6 +8,9 @@ public class Test_StaticBlock {
         System.out.println(StaticBlockInitialization.b);
         System.out.println(StaticBlockInitialization.c);
 
+        System.out.println("============================================");
+
+        System.out.println(AccessModifiers.publicDate);
 
     }
 }

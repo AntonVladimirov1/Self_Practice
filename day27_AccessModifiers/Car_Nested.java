@@ -1,6 +1,6 @@
 package day27_AccessModifiers;
 
-public class Car_Nested {     //* Outer class
+    public class Car_Nested {     //* Outer class
 
     String make,model,color;
     int year;
