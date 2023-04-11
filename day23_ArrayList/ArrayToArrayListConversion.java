@@ -18,6 +18,12 @@ public class ArrayToArrayListConversion {
         ArrayList<String> list =new ArrayList<>(Arrays.asList(arr));
 
         System.out.println(list);
+        System.out.println("===========================================");
+
+
+
+
+
 
     }
 }

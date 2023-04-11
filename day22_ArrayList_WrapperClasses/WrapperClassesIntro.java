@@ -8,6 +8,7 @@ public class WrapperClassesIntro {
         System.out.println("=============================");
         Integer bob = 45;
         int coc = bob;  // unboxing
+        System.out.println(bob);
 
     }
 }
