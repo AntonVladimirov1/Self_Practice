@@ -10,7 +10,8 @@ public class Test_StaticBlock {
 
         System.out.println("============================================");
 
-        System.out.println(AccessModifiers.publicDate);
+        System.out.println(AccessModifiers.publicData);
+        //System.out.println(AccessModifiers.privateData);
 
     }
 }

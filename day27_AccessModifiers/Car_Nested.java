@@ -2,9 +2,9 @@ package day27_AccessModifiers;
 
     public class Car_Nested {     //* Outer class
 
-    String make,model,color;
-    int year;
-    double price;
+    public String make,model,color;
+    public int year;
+    public double price;
 
     public static int wheels = 4;
 

@@ -2,10 +2,10 @@ package Live_Sessions;
 
 public class Hobby {
 
-    String name;
-    double annualCost;
-    boolean isOutdoor;
-    boolean requiresOthers;
+    public String name;
+    public double annualCost;
+    public boolean isOutdoor;
+    public boolean requiresOthers;
 
     public Hobby(String name) {
         this.name = name;
