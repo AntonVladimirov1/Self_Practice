@@ -13,11 +13,14 @@ public class Timer {
         for (int i = minutes; i >0 ; i--) {
             for (int z = 59; z >=0; z--) {
 
-                System.out.print("\r"+(i-1)+" minutes and "+z+" seconds left");
+                System.out.print("\r"+(i-1)+" min : "+z+" sec  left");
                 Thread.sleep(1000);
             }
         }
-        System.err.println("==> Time is UP <==");
+        System.out.println("\t");
+        System.err.println("   ====================");
+        System.err.println("  ==>   Time is UP   <==");
+        System.err.println("   ====================");
 
     }
 }
