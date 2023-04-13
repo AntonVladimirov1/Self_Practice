@@ -24,4 +24,14 @@ public class Encryption {
         System.out.println(encrypted.trim());
     }
 
+    public void decrypt(){
+        String decrypted ="";
+        for (String each : message.split(" ")) {
+            int dec = Integer.parseInt(each);
+            char ch = (char) (dec/factorNumber-modifyNumber);
+            decrypted+=ch;
+        }
+        System.out.println(decrypted.trim());
+    }
+
 }
