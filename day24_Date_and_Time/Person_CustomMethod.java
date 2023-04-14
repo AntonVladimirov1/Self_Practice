@@ -13,7 +13,7 @@ public class Person_CustomMethod {
         this.name = name;
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
-        age = LocalDate.now().getYear() - dateOfBirth.getYear();
+        this.age = LocalDate.now().getYear() - dateOfBirth.getYear();
     }
 
     public String toString() {

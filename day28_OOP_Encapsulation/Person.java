@@ -59,11 +59,10 @@ public class Person {
         this(name);
         setGender(gender);
     }
-    public Person(String name, char gender, LocalDate dateOfBirth, int age) {
+    public Person(String name, char gender, LocalDate dateOfBirth) {
         this(name,gender);
         setDateOfBirth(dateOfBirth);
-        setAge(age);
-        age = LocalDate.now().getYear()-dateOfBirth.getYear();
+        this.age = LocalDate.now().getYear()-dateOfBirth.getYear();
     }
 
 
