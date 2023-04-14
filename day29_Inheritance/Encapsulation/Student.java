@@ -47,7 +47,7 @@ public class Student {
         if (gender=='M'|| gender=='F'){
             this.gender = gender;
         }else {
-            System.out.println("Invalid gender type");
+            System.err.println("Invalid gender type");
             System.exit(1);
         }
     }
@@ -60,7 +60,7 @@ public class Student {
         if (isValid) {
             this.grade = grade;
         } else {
-            System.out.println("Invalid grade");
+            System.err.println("Invalid grade");
             System.exit(1);
         }
     }
