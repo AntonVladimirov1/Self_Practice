@@ -4,6 +4,7 @@ public class Employee {
 
     private String name;
     private double salary;
+    private String jobTitle;
 
     public String getName() {
         if (name==null){
@@ -20,6 +21,7 @@ public class Employee {
         }
         this.name = name;
     }
+
     public double getSalary() {
         return salary;
     }
@@ -29,5 +31,32 @@ public class Employee {
             System.exit(1);
         }
         this.salary = salary;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+    public void setJobTitle(String jobTitle) {
+        if (jobTitle.isEmpty() || jobTitle.isBlank()){
+            System.err.println("Job title cannot be empty");
+            System.exit(1);
+        }
+        this.jobTitle = jobTitle;
+    }
+
+
+    public Employee(String name, double salary, String jobTitle) {
+        setName(name);
+        setSalary(salary);
+        setJobTitle(jobTitle);
+
+    }
+
+    public String toString() {
+        return "Employee{" +
+                "name = '" + getName() + '\'' +
+                ", salary = " + getSalary() +
+                ", jobTitle = '" + getJobTitle() + '\'' +
+                '}';
     }
 }

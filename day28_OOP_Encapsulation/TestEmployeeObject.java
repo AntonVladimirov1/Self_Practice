@@ -3,7 +3,7 @@ package day28_OOP_Encapsulation;
 public class TestEmployeeObject {
     public static void main(String[] args) {
 
-        Employee employee1 = new Employee();
+       /* Employee employee1 = new Employee();
         System.out.println(employee1.getSalary());
 
         employee1.setSalary(120_000);
@@ -11,8 +11,10 @@ public class TestEmployeeObject {
 
         System.out.println(employee1.getName());
         employee1.setName("Kolyan");
-        System.out.println(employee1.getName());
+        System.out.println(employee1.getName()); */
+
+        Employee employee1 = new Employee("Katya",100_000,"shluha");
+        System.out.println(employee1);
 
     }
-
 }

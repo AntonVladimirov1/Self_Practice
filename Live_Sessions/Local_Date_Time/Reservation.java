@@ -12,6 +12,7 @@ public class Reservation {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter year");
         int year = scanner.nextInt();
+
         System.out.println("Enter month");
         int month = scanner.nextInt();
         System.out.println("Enter day");
