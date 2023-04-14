@@ -16,5 +16,7 @@ public class TestEmployeeObject {
         Employee employee1 = new Employee("Katya",100_000,"shluha");
         System.out.println(employee1);
 
+
+
     }
 }
