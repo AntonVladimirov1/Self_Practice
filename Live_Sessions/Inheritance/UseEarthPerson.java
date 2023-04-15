@@ -2,7 +2,7 @@ package Live_Sessions.Inheritance;
 
 import java.util.Arrays;
 
-public class UseEarth {
+public class UseEarthPerson {
     public static void main(String[] args) {
 
         // Earth.northAmerica -> how to access the ArrayList
