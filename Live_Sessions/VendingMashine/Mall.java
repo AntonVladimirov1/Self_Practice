@@ -51,6 +51,8 @@ public class Mall {
         System.out.println(vendingTwo.vend("Lemonade"));
         System.out.println(vendingTwo.vend("Coke"));
         System.out.println(vendingTwo.vend("V8"));
+
+
     }
 
 
