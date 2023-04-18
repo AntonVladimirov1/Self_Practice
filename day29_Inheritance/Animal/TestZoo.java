@@ -1,6 +1,6 @@
 package day29_Inheritance.Animal;
 
-public class Zoo {
+public class TestZoo {
     public static void main(String[] args) {
 
         Dog dog = new Dog();

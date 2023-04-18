@@ -17,6 +17,12 @@ public class Phone {
         setPrice(price);
         setColor(color);
     }
+    public void call(long phoneNumber){
+        System.out.println(getModel()+" is calling "+phoneNumber);
+    }
+    public void text(long phoneNumber){
+        System.out.println(getModel()+" is texting "+phoneNumber);
+    }
 
     public String getBrand() {
         return brand;
@@ -69,11 +75,11 @@ public class Phone {
 
     public String toString() {
         return getClass().getSimpleName()+"{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", size='" + size + '\'' +
-                ", price=" + price +
-                ", color='" + color + '\'' +
+                " brand = '" + brand + '\'' +
+                ", model = '" + model + '\'' +
+                ", size = '" + size + '\'' +
+                ", price = " + price +
+                ", color = '" + color + '\'' +
                 '}';
     }
 }
