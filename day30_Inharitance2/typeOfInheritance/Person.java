@@ -57,10 +57,10 @@ public class Person {
 
     public String toString() {
         return getClass().getSimpleName()+ "{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                ", DOB=" + DOB +
+                "name = '" + name + '\'' +
+                ", age = " + age +
+                ", gender = " + gender +
+                ", DOB = " + DOB +
                 '}';
     }
 }
