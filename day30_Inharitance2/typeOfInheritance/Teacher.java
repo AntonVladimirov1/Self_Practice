@@ -1,10 +1,10 @@
 package day30_Inharitance2.typeOfInheritance;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Teacher extends Employee{
 
-    public Teacher(String name, char gender, LocalDateTime DOB, String employeeId, String jobTitle, double salary) {
+    public Teacher(String name, char gender, LocalDate DOB, String employeeId, String jobTitle, double salary) {
         super(name, gender, DOB, employeeId, jobTitle, salary);
     }
 

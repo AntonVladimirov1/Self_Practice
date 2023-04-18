@@ -1,12 +1,11 @@
 package day30_Inharitance2.typeOfInheritance;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class President extends Person{
 
 
-    public President(String name, char gender, LocalDateTime DOB, LocalDate electedDate) {
+    public President(String name, char gender, LocalDate DOB, LocalDate electedDate) {
         super(name, gender, DOB);
         setElectedDate(electedDate);
     }
