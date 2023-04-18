@@ -17,6 +17,7 @@ public class Phone {
         setPrice(price);
         setColor(color);
     }
+
     public void call(long phoneNumber){
         System.out.println(getModel()+" is calling "+phoneNumber);
     }
