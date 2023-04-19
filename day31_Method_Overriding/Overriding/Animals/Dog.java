@@ -1,6 +1,6 @@
-package day31_Method_Overriding.Overriding;
+package day31_Method_Overriding.Overriding.Animals;
 
-public class Dog extends Animals{
+public class Dog extends Animals {
 
     public Dog(String name, String breed, char gender, int age, String size, String color) {
         super(name, breed, gender, age, size, color);

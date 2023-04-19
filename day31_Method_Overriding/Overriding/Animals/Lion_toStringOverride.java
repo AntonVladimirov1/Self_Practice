@@ -1,10 +1,12 @@
-package day31_Method_Overriding.Overriding;
+package day31_Method_Overriding.Overriding.Animals;
 
-public class Lion extends Animals{
+import day31_Method_Overriding.Overriding.Animals.Animals;
+
+public class Lion_toStringOverride extends Animals {
 
     private boolean isAfrican;
 
-    public Lion(String name, String breed, char gender, int age, String size, String color, boolean isAfrican) {
+    public Lion_toStringOverride(String name, String breed, char gender, int age, String size, String color, boolean isAfrican) {
         super(name, breed, gender, age, size, color);
         setAfrican(isAfrican);
     }
@@ -31,17 +33,17 @@ public class Lion extends Animals{
 
     @Override
     public String toString() {
-        // return super.toString().replace("}","") +
-        // ", isAfrican = '" + isAfrican + '\'' + '}';
+         return super.toString() +
+         ", isAfrican = '" + isAfrican + '\'' + '}';
 
-        return getClass().getSimpleName()+"{" +
+       /* return getClass().getSimpleName()+" {" +
                 "name = '" + getName() + '\'' +
                 ", breed = '" + getBreed() + '\'' +
                 ", gender = " + getGender() +
                 ", age = " + getAge() +
                 ", size = '" + getSize() + '\'' +
                 ", color = '" + getColor() + '\'' +
-                ", isAfrican = '" + isAfrican + '\'' +
-                '}';
+                ", isAfrican = '" + isAfrican + '\''; */     // +
+               // '}';
     }
 }

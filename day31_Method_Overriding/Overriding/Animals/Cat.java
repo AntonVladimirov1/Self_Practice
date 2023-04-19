@@ -1,6 +1,8 @@
-package day31_Method_Overriding.Overriding;
+package day31_Method_Overriding.Overriding.Animals;
 
-public class Cat extends Animals{
+import day31_Method_Overriding.Overriding.Animals.Animals;
+
+public class Cat extends Animals {
 
     public Cat(String name, String breed, char gender, int age, String size, String color) {
         super(name, breed, gender, age, size, color);

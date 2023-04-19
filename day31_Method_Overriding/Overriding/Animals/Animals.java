@@ -1,4 +1,4 @@
-package day31_Method_Overriding.Overriding;
+package day31_Method_Overriding.Overriding.Animals;
 
 public class Animals {
 
@@ -69,13 +69,12 @@ public class Animals {
     }
 
     public String toString() {
-        return getClass().getSimpleName()+"{" +
-                "name = '" + name + '\'' +
+        return getClass().getSimpleName()+" {" +
+                " name = '" + name + '\'' +
                 ", breed = '" + breed + '\'' +
                 ", gender = " + gender +
                 ", age = " + age +
                 ", size = '" + size + '\'' +
-                ", color = '" + color + '\'' +
-                '}';
+                ", color = '" + color + '\'';
     }
 }
