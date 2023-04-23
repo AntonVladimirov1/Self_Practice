@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Array_moveFirstIndexToLastPosition {
     public static void main(String[] args) {
 
-        int[] a = {1,2,3};
+        int[] a = {150,2,3};
         // index        0 1 2
 
         int temp = a[0];

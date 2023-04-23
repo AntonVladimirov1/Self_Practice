@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Runner2 {
+public class ArrayList_AnyMaxNumber {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
@@ -21,8 +21,8 @@ public class Runner2 {
             We then create a new ArrayList using Arrays.asList() that contains only this largest element
             and use the removeAll() method to remove all occurrences
             of this largest element from the original ArrayList list.
-            in the first iteration max is 8 and we remove all 8s
-            in the next iteration max is 7 and we remove all 7s and so on...
+            in the first iteration max is 8, and we remove all 8s
+            in the next iteration max is 7, and we remove all 7s and so on...
              */
             list.removeAll(Arrays.asList(Collections.max(list)));
         }
