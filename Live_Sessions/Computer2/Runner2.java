@@ -6,6 +6,7 @@ public class Runner2{
 
         Mac obj=new Mac();
 
+        //System.out.println(obj.brand); not accessible
         System.out.println(obj.os);
       //  System.out.println(obj.memory); not accessible
         System.out.println(obj);
