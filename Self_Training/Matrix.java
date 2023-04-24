@@ -8,17 +8,15 @@ public class Matrix {
                 {36,-9,91},
                 {99,33,16}
         };
-        int target = 18;
+        int target = 12;
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
 
-                if (matrix[i][j]==target){
-                    System.out.println(i+";"+j);
+                if (matrix[i][j]==target) {
+                    System.out.println(i + ";" + j);
                 }
-
             }
         }
-
     }
 }
