@@ -1,27 +1,25 @@
 package utilities;
 
 
-public class Runner3 {
-    public static void main(String[] args) {
+ class Runner3 {
+     public static String name;
+     static {
+         name="heyo";
+     }
 
-        String head = "shoulders";
-        String knees = "toes";
-        String elbow = "head";
-        String eye = "eyes and ears";
-        String ear = "eye";
+     public static void main(String[] args) {
+         Runner3 first=new Runner3();
+         first.name="yoyo";
 
-        touch(ear, elbow);
-        touch(elbow, ear);
-        touch(head, "elbow");
-        touch(eye, eye);
-        touch(knees, "Toes");
-        touch(head, "knees " + knees);
-    }
+         Runner3 second=new Runner3();
+         second.name="nono";
 
-    public static void touch(String elbow, String ear) {
-        System.out.println("touch you " + elbow + " to your " + ear);
+         Runner3 third=new Runner3();
 
-    }
+         System.out.println(third.name);
+         System.out.println(Runner3.name);
 
+     }
 }
+
 
