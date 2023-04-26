@@ -1,4 +1,5 @@
-line 1
-line 2
-line 3
+line 1 - lets say this is comment for the book
+line 2 - and something else
+line 3 - and else
 line 4
+line 5
