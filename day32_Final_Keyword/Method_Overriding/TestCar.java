@@ -21,6 +21,7 @@ public class TestCar {
         audi.start();
         bmw.start();
         tesla.start();
+        tesla.autoPilot();
         System.out.println("=======================================================================");
 
         tesla.setPrice(45000); // incorrect price
