@@ -14,16 +14,14 @@ public class Person {
         numberOfHead=1;
     }
 
-    public Person(String name, char gender, int age, LocalDate dateOfBirth) {
+    public Person(String name, char gender, LocalDate dateOfBirth) {
         setName(name);
         if(!(gender == 'M' || gender == 'F')){
             System.out.println("Invalid gender: "+gender);
         }
         this.gender = gender;
-        if(age<=0){
-            System.out.println("Invalid age: "+age);
-        }
-        this.age = age;
+
+        this.age = LocalDate.now().getYear() - dateOfBirth.getYear();
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -62,10 +60,10 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", gender=" + gender +
-                ", age=" + age +
-                ", dateOfBirth=" + dateOfBirth +
+                " name ='" + name + '\'' +
+                ", gender =" + gender +
+                ", age =" + age +
+                ", dateOfBirth =" + dateOfBirth +
                 '}';
     }
 }
