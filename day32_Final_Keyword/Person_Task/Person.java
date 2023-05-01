@@ -17,12 +17,12 @@ public class Person {
     public Person(String name, char gender, LocalDate dateOfBirth) {
         setName(name);
         if(!(gender == 'M' || gender == 'F')){
-            System.out.println("Invalid gender: "+gender);
+            System.err.println("Invalid gender: "+gender);
         }
         this.gender = gender;
-
-        this.age = LocalDate.now().getYear() - dateOfBirth.getYear();
         this.dateOfBirth = dateOfBirth;
+        this.age = LocalDate.now().getYear() - dateOfBirth.getYear();
+
     }
 
     public String getName() {
