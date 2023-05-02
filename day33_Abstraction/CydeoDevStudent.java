@@ -61,7 +61,7 @@ public final class CydeoDevStudent extends Person {
     }
     @Override
     public void sleep() {
-        System.out.println(getName()+" doesn't need to sleep");
+        System.out.println(getName()+" doesn't sleep");
     }
     @Override
     public String toString() {

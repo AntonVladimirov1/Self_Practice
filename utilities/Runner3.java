@@ -1,25 +1,22 @@
 package utilities;
 
 
- class Runner3 {
-     public static String name;
-     static {
-         name="heyo";
+   class Runner3 {
+     private void print(){
+         System.out.println("hello world");
      }
 
-     public static void main(String[] args) {
-         Runner3 first=new Runner3();
-         first.name="yoyo";
+}
+   class Main extends Runner3{
 
-         Runner3 second=new Runner3();
-         second.name="nono";
-
-         Runner3 third=new Runner3();
-
-         System.out.println(third.name);
-         System.out.println(Runner3.name);
-
+   private void print(){
+         System.out.println("hello cydeo");
      }
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.print();
+    }
 }
 
 
