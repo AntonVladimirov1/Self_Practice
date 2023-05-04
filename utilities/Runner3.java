@@ -1,22 +1,14 @@
 package utilities;
 
 
-   class Runner3 {
-     private void print(){
-         System.out.println("hello world");
-     }
+import day34_Abstraction_Interface.Animal_Interface.Person;
 
-}
-   class Main extends Runner3{
-
-   private void print(){
-         System.out.println("hello cydeo");
-     }
-
-    public static void main(String[] args) {
-        Main obj = new Main();
-        obj.print();
-    }
+public class Runner3 {
+       public static void main(String[] args) {
+              Person person=new Person();
+              person.play();
+              person.swim();
+       }
 }
 
 
