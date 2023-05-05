@@ -1,4 +1,4 @@
-package day35_Polimorphism.Transport;
+package day35_Polymorphism.Transport;
 
 public abstract class Car extends Transportation{
 

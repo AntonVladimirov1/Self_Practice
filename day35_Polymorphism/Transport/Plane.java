@@ -1,4 +1,4 @@
-package day35_Polimorphism.Transport;
+package day35_Polymorphism.Transport;
 
 import day34_Abstraction_Interface.Animal_Interface.Flyable;
 
