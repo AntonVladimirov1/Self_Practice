@@ -10,6 +10,7 @@ public class Runner3 {
               System.out.println(person);
               person.play();
               person.swim();
+
               Dolphin dolphin=new Dolphin("Sunny","White",'M',5,"big","Grey");
               System.out.println(dolphin);
               dolphin.play();
