@@ -1,4 +1,4 @@
-package Self_Training;
+package utilities;
 //            0    1    2
 //          ________________
 //        0 | 18 | 9  | 12 |
@@ -19,7 +19,7 @@ public class Matrix {
                 {36,-9,3},
                 {71,5,16}
         };
-        int target = 18;
+        int target = 20;
 
         for (int row = 0; row < matrix.length; row++) {
             for (int column = 0; column < matrix[row].length; column++) {

@@ -43,7 +43,7 @@ public class Polymorphism_Practice3 {
             }
         }
         System.out.println("IPhones = "+countIPhone+"\nSamsung = "+countSamsung+"\nNokia = "+countNokia);
-        System.out.println("==========================================================");
+        System.out.println("======================================================");
 
         for (Phone each : phones) {
             if (each instanceof IPhone || each instanceof Samsung){
