@@ -33,7 +33,7 @@ public class Polymorphism_Intro {                // Relation - Parent reference 
 
         String str = "Java";
         Integer n = 100;
-        Boolean r = false;
+        Boolean r = true;
         Double d = 10.5;
 
         Circle circle = new Circle(4);
