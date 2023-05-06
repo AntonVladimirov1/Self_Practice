@@ -48,6 +48,12 @@ public class Polymorphism_Practice2 {
         System.out.println("Drivers = "+countDrivers);
         System.out.println("=================================================================");
 
+        for (Employee each : employees) {
+            if (!(each instanceof Developer)){
+                System.out.println(each.getName());
+            }
+        }
+
 
     }
 }
