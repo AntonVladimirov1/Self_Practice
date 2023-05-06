@@ -7,15 +7,17 @@ public class Phone {
     private String brand;
     private String model;
     private String size;
-    private double price;
     private String color;
+    private double price;
 
-    public Phone(String brand, String model, String size, double price, String color) {
-        setBrand(brand);
+
+    public Phone(String model, String size, String color, double price) {
+        setBrand(getClass().getSimpleName());
         setModel(model);
         setSize(size);
-        setPrice(price);
         setColor(color);
+        setPrice(price);
+
     }
 
     public void call(long phoneNumber){
