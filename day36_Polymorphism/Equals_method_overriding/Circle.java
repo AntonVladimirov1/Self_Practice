@@ -1,4 +1,4 @@
-package day36_Polymorphism;
+package day36_Polymorphism.Equals_method_overriding;
 
 public class Circle {
 

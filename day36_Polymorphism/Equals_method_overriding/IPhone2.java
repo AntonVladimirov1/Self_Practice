@@ -1,4 +1,4 @@
-package day36_Polymorphism;
+package day36_Polymorphism.Equals_method_overriding;
 
 import java.util.Arrays;
 
@@ -85,4 +85,18 @@ public class IPhone2 {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof IPhone2)){
+            System.err.println("Invalid object");
+        }
+        if (obj instanceof IPhone2){
+            if (model.equals(((IPhone2) obj).model)){  //* equal - is for string comparing. == - is for all others
+                if (color.equals(((IPhone2) obj).color)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
