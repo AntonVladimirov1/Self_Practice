@@ -1,5 +1,8 @@
 package day37_Exceptions;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class Try_Catch_blocks2 {
     public static void main(String[] args) {
 
@@ -10,9 +13,17 @@ public class Try_Catch_blocks2 {
         try {
             System.out.println(arr[1000]);
         }catch (RuntimeException e){
-            e.printStackTrace();
+            e.printStackTrace(); // better always use this method
+           // System.out.println(e.getMessage()); // but also can use message
         }
         System.out.println("Program ended");
+        System.out.println("==========================================");
+
+        try {
+            FileInputStream file = new FileInputStream("File Path");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
