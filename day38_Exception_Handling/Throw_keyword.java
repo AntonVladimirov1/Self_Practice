@@ -10,8 +10,16 @@ public class Throw_keyword {
         int age = new Scanner(System.in).nextInt();
 
         if (age<0 || age>150){
-            throw new InputMismatchException("Invalid age beeeee"); //* can write down any message
+            throw new InputMismatchException("Invalid age, you motherfa..."); //* can write down any message
         }
+        if (age>=21){
+            System.out.println("You are eligible");
+        }else {
+            System.out.println("Not eligible");
+        }
+        System.out.println("==================================================");
+
+        throw new RuntimeException("Runtime exception");
 
     }
 }

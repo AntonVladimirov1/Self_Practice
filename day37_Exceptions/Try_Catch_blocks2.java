@@ -24,6 +24,7 @@ public class Try_Catch_blocks2 {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Something");
 
     }
 }
