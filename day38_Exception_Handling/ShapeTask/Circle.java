@@ -14,7 +14,7 @@ public class Circle {
 
     public void setRadius(double radius) {
         if (radius<=0){
-            throw new InvalidShapeException("Invalid negative Radius");
+            throw new InvalidShapeException("Invalid '0' or negative Radius");
         }
         Radius = radius;
     }
