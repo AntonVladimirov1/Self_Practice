@@ -19,15 +19,21 @@ public class Matrix {
                 {36,-9,3},
                 {71,5,16}
         };
-        int target = 20;
+        int target = 5;
+        boolean found = false;
 
         for (int row = 0; row < matrix.length; row++) {
             for (int column = 0; column < matrix[row].length; column++) {
-
                 if (matrix[row][column]==target) {
-                    System.out.println(row +";"+ column);
+                    found = true;
+                    System.out.println("Target location = "+row +";"+ column);
                 }
             }
+        }
+        if (found){
+            System.out.println("<Success>");
+        }else {
+            System.err.println("Target not found");
         }
     }
 }
