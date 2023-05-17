@@ -12,7 +12,7 @@ public class ArrayListMethods1 {
         list.add(1,50);            //* inserting another element in 1 index place
         System.out.println(list);
         System.out.println("=====================================");
-                        /// GET method - to get(print) chosen elements from ArrayList
+
         ArrayList<String> student = new ArrayList<>();
         student.add("Vasya");
         student.add("Petya");
@@ -20,6 +20,7 @@ public class ArrayListMethods1 {
         student.add("Masha");
         System.out.println(student.size());
         System.out.println(student);
+                    /// GET method - to get(print) chosen elements from ArrayList
         
         String firstStudent = student.get(0);
         System.out.println(firstStudent);
