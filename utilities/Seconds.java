@@ -5,7 +5,7 @@ public class Seconds {
         int hours = Seconds/3600;
         int minutes = (Seconds%3600)/60;
         int seconds = (Seconds%60)/1;
-        String result =(hours+" hours, "+minutes+" minutes, and "+seconds+" seconds");
+        String result =(hours+" hours, "+minutes+" minutes, "+seconds+" seconds");
         System.out.println(result);
 
         /*System.out.println("===================================");
