@@ -1,26 +1,45 @@
 package utilities;
 
-import java.util.Scanner;
-
 public class Runner3 {
-    public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Enter first  number");
-        int a = input.nextInt();
-
-        System.out.println("Enter second  number");
-        int b = input.nextInt();
-
-
-        int result = 0;
-
-        while (a >= b) {
-            a = a- b;
-            result = result + 1;
+    public static double magicDivision(int number, int divider) {
+        if (number == 0) {
+            return 0;
         }
-        System.out.println("Divide is : " + result);
+        if (divider == 0) {
+            throw new ArithmeticException("divider can not be 0");
+        }
+        int sign = 1;
+        if (number < 0 && divider > 0 || number > 0 && divider < 0) {
+            sign = -1;
+        }
+
+        number = Math.abs(number);
+        divider = Math.abs(divider);
+        int intCount = 0;
+        while (number >= divider) {
+            number -= divider;
+            intCount++;
+        }
+
+        double decimalCount = 0;
+        if (number!=0) {
+            number = number * 10;
+            while (number>=divider){
+                number-=divider;
+                decimalCount+=0.1;
+            }
+        }
+
+        return (intCount+decimalCount)*sign;
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(magicDivision(10, 20));
+        System.out.println(magicDivision(6, -2));
+        System.out.println(magicDivision(1, 2));
+        System.out.println(magicDivision(8, 3));
     }
 
 }
