@@ -28,6 +28,7 @@ public class Map_Demo {
         for (Object value : map.values()) {
             System.out.println("value = " + value);
         }
+        System.out.println((int) '3');
 
     }
 }
