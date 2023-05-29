@@ -8,7 +8,10 @@ public class StringReverse {
         for (int i = str.length()-1; i >=0 ; i--) {
             reverse += str.charAt(i); // to get each character of the string from last index to index zero
         }
-        System.out.println(reverse);
         return reverse;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverse("public hub"));
     }
 }
