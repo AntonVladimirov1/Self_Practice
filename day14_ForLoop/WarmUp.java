@@ -3,7 +3,7 @@ package day14_ForLoop;
 public class WarmUp {
     public static void main(String[] args) {
 
-        System.out.println(combine("poo","oops"));
+        System.out.println(combine("pox","oops"));
         System.out.println("=============================");
         System.out.println(sumOf4IntegerNumbers(10,20,30,51));
     }
