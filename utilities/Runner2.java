@@ -57,6 +57,9 @@ public class Runner2 {
         System.out.println("=======================");
         Codility(30);
         System.out.println("=======================");
+
+        StringBuilder result = new StringBuilder("welcome");
+        System.out.println(result.reverse());  //* very cool thing!!!
     }
 
 }
