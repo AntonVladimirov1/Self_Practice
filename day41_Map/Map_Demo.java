@@ -13,14 +13,20 @@ public class Map_Demo {
         map.put("salary",150_000);
 
         System.out.println(map);
+        System.out.println("====================================");
         System.out.println(map.size());
+        System.out.println("====================================");
         System.out.println(map.get("salary")+" - "+ map.get("name"));
+        System.out.println("====================================");
         map.replace("age", 28, 30);
         System.out.println(map);
+        System.out.println("====================================");
         map.remove("gender","male");
         System.out.println(map);
+        System.out.println("====================================");
         map.put("gender","male");
         System.out.println(map);
+        System.out.println("====================================");
         for (String key : map.keySet()) {
             System.out.println("key = " + key);
         }
@@ -28,7 +34,6 @@ public class Map_Demo {
         for (Object value : map.values()) {
             System.out.println("value = " + value);
         }
-        System.out.println((int) '3');
 
     }
 }
