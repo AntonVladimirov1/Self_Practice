@@ -19,4 +19,9 @@ public class Prime {
         }
         return prime;
     }
+
+    public static void main(String[] args) {
+
+        System.out.println(primeInRange(30));
+    }
 }

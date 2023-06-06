@@ -13,7 +13,7 @@ public class Array_Reverse_Middle {
         for (int i = eachWord[1].length()-1; i >= 0; i--){
             reverse += eachWord[1].charAt(i);
         }
-        System.out.println(eachWord[0] +" "+ reverse +" "+ eachWord[2]);
+        System.out.println(reverse +" ");
 
     }
 }

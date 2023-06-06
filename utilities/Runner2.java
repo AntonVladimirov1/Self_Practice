@@ -1,65 +1,52 @@
 package utilities;
 
+import java.util.Arrays;
+
 public class Runner2 {
 
-    public static void SwapNumbers(int a,int b){
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-        System.out.println("--------");
-        a = a ^ b;
-        b = a ^ b;
-        a = a ^ b;
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-    }
-    public static void DivisibleBy(){
-        String by15 = "";
-        String by3 = "";
-        String by5 = "";
-        for (int i = 1; i <= 100 ; i++) {
-            if (i%15==0){
-                by15 += i+"; ";
-            } else if (i%3==0) {
-                by3 += i+"; ";
-            } else if (i%5==0) {
-                by5 += i+"; ";
-            }
+    public static boolean isPrime(int num){
+        if (num<=1)
+            return false;
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0)
+                return false;
         }
-        System.out.println("Divisible by 15:  "+by15);
-        System.out.println("Divisible by 5:  "+by5);
-        System.out.println("Divisible by 3:  "+by3);
+        return true;
     }
-    public static void Codility(int N) {
-        for (int i = 1; i <= N; i++) {
-            StringBuilder result = new StringBuilder();
-            if (i % 2 == 0) {
-                result.append("Codility");
-            }
-            if (i % 3 == 0) {
-                result.append("Test");
-            }
-            if (i % 5 == 0) {
-                result.append("Coders");
-            }
-            if (result.length() == 0) {
-                System.out.println(i);
-            } else {
-                System.out.println(result);
-            }
+
+
+    public static int reverseInt(int number) {
+        boolean isNegative = number < 0;
+        if(isNegative){
+            number = number * -1;
         }
+        int reverse = 0;
+        int lastDigit;
+        while (number >= 1) {
+            lastDigit = number % 10;
+            reverse = reverse * 10 + lastDigit;
+            number = number / 10;
+        } return isNegative ? reverse*-1 : reverse;
     }
+    public static int[] makeLast(int[] nums){
+        int last = nums[nums.length-1];
+        int[] newArray = new int[nums.length*2];
+        newArray[newArray.length-1]= last;
+        return newArray;
+    }
+
 
     public static void main(String[] args) {
 
-        SwapNumbers(5,10);
-        System.out.println("=======================");
-        DivisibleBy();
-        System.out.println("=======================");
-        Codility(30);
-        System.out.println("=======================");
+        int[] mums ={3,4};
+        System.out.println(Arrays.toString(makeLast(mums)));
 
-        StringBuilder coolStuff = new StringBuilder("welcome");
-        System.out.println(coolStuff.reverse());  //* very cool thing!!!
+        System.out.println(reverseInt(-1234567));
+
+        System.out.println(isPrime(11));
+
+        StringBuilder coolStuff = new StringBuilder("welcome");    //* very cool thing!!!
+        System.out.println(coolStuff.reverse());
     }
 
 }
