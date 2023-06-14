@@ -78,9 +78,9 @@ public class Runner2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(compareStrings("ABcdEFg", "abcdEFg"));
+        System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
 
-        System.out.println(freqChar("aaaAaHHggguurrrroooo"));
+        System.out.println(freqChar("aaaAaHHgOOgguurrrroooo"));
 
         System.out.println(noDuplication("fFFffuuuUUccCCckkk"));
 

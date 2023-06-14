@@ -65,4 +65,9 @@ public class RemoveDuplicates_FromArray {
         return result;
     }
 
+    public static void main(String[] args) {
+        char[] something ={'a','a','a','b','b','c'};
+        System.out.println(removeDup(something));
+    }
+
 }
