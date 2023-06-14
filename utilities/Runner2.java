@@ -1,5 +1,7 @@
 package utilities;
 
+import java.util.Arrays;
+
 public class Runner2 {
 
     public static boolean isPrime(int num){
@@ -25,7 +27,7 @@ public class Runner2 {
         } return isNegative ? reverse*-1 : reverse;
     }
 
-    public static int reversedNegative(int num){  // Reverse Integer (any)
+    public static int reverseAnyInt(int num){  // Reverse Integer (any)
         int reversed = 0;
         for (; num !=0; num /=10){
             int lastDigit = num % 10;
@@ -34,17 +36,63 @@ public class Runner2 {
         return reversed;
     }
 
+    public static String noDuplication(String str){
+        String result = "";
+        str = str.toLowerCase();
+        for (int i = 0; i < str.length(); i++) {
+            if (result.contains(str.charAt(i)+"")){
+                continue;
+            }
+            result+= str.charAt(i);
+        }
+        return result;
+    }
+
+    public static String freqChar(String str){
+        String result = "";
+        str = str.toLowerCase();
+        for (int j = 0; j < str.length(); j++) {
+            char ch = str.charAt(j);
+            int count = 0;
+            for (int i =0; i< str.length(); i++){
+                if (str.charAt(i) == ch ){
+                    count++;
+                }
+            }
+            if (result.contains(ch+"")){  // to avoid duplication
+                continue;
+            }
+            result+= ch+ "" +count+ " ";
+        }
+        return result;
+    }
+
+    public static Boolean compareStrings(String str1,String str2){
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+        char[] chars1 = str1.toCharArray();
+        char[] chars2 = str2.toCharArray();
+        Arrays.sort(chars1);
+        Arrays.sort(chars2);
+        return Arrays.equals(chars1,chars2);
+    }
 
     public static void main(String[] args) {
+        System.out.println(compareStrings("ABcdEFg", "abcdEFg"));
 
-        System.out.println("reversed " + reversedNegative(-654321));
+        System.out.println(freqChar("aaaAaHHggguurrrroooo"));
+
+        System.out.println(noDuplication("fFFffuuuUUccCCckkk"));
+
+        System.out.println(reverseAnyInt(-654321));
 
         System.out.println(reverseInt(-1234567));
 
         System.out.println(isPrime(11));
 
-        StringBuilder coolStuff = new StringBuilder("welcome");    //* very cool thing!!!
+        StringBuilder coolStuff = new StringBuilder("emoclew");    //* very cool thing!!!
         System.out.println(coolStuff.reverse());
+
     }
 
 }
