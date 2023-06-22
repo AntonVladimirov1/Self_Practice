@@ -1,11 +1,10 @@
 package day19_Array;
 
 public class MaxMinNumber {
+
     public static void main(String[] args) {
 
-
         int[] numbers = {100,20,500,40,-10,30,5,-15};
-
         int max = numbers[0];   // assume that first element is the maximum number
         int min = numbers[0];
 
