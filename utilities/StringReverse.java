@@ -13,7 +13,7 @@ public class StringReverse {
 
     public static void main(String[] args) {
 
-        System.out.println(reverse("public hub"));
+        System.out.println(reverse("buh cilbup"));
     }
 
 }

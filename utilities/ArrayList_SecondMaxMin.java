@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class ArrayList_SecondMaxMin {
+
     public static void main(String[] args) {
 
         ArrayList<String> str =new ArrayList<>(Arrays.asList("Anna","Canada","Bob","David","Lan","Abida","Ezra","Farida"));

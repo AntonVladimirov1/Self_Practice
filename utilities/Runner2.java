@@ -77,6 +77,16 @@ public class Runner2 {
         return Arrays.equals(chars1,chars2);
     }
 
+    public static String reversed(String str){
+
+        String result = "";
+        for (int i = str.length()-1; i >= 0; i--) {
+            result+= str.charAt(i);
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
 
@@ -92,6 +102,8 @@ public class Runner2 {
 
         StringBuilder coolStuff = new StringBuilder("emoclew");    //* very cool thing!!!
         System.out.println(coolStuff.reverse());
+
+        System.out.println(reversed("emOClew"));
 
     }
 
