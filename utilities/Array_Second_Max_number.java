@@ -17,6 +17,7 @@ public class Array_Second_Max_number {
         return secMax;
     }
 
+        //* this is ChatGPT
     public static int findSecondMax(int[] arr) {
 
         int max = Integer.MIN_VALUE;
