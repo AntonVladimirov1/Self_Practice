@@ -2,7 +2,7 @@ package utilities;
 
 import java.util.Scanner;
 
-public class MinMaxNumberForLoop {
+public class ArrayMinMaxNumber {
 
     public static String minMaxNum(){
         String result="";
