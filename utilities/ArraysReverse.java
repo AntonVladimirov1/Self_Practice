@@ -1,5 +1,7 @@
 package utilities;
 
+import java.util.Arrays;
+
 public class ArraysReverse {
 
     public static int[] reverse(int[] array) {
@@ -56,5 +58,12 @@ public class ArraysReverse {
             //            reverse[j++] = array[i];
         }
         return reverse;
+    }
+
+    public static void main(String[] args) {
+        int[] num = {1,2,3,4,5,6,7};
+        System.out.println(Arrays.toString(reverse(num)));
+        String[] letters = {"good","are","you"};
+        System.out.println(Arrays.toString(reverse(letters)));
     }
 }
