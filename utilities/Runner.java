@@ -4,6 +4,17 @@ import java.util.Arrays;
 
 public class Runner {
 
+    static StringBuilder rev = new StringBuilder("dlrow olleH");
+
+    public static String reverseStr(String str){
+        String result="";
+
+        for (int i = str.length()-1; i >=0 ; i--) {
+            result += str.charAt(i);
+        }
+        return result;
+    }
+
     public static String FINRA(int num){
         String result ="";
         for (int i = 1; i <= num ; i++) {
@@ -26,6 +37,10 @@ public class Runner {
         }else {
             System.out.println(num+" - is odd number");
         }
+    }
+
+    public static String EvenOdd2(int num){
+        return (num%2==0)? num+" is Even": num+" is Odd";
     }
 
     public static int[] evenFromArray1(int[] arr) {
@@ -53,12 +68,51 @@ public class Runner {
         return Arrays.stream(arr).filter(num -> num % 2 == 0).toArray();
     }
 
-    public static void main(String[] args) {
-        int[] numbers ={1,2,3,4,5,6,7,8,9,10,11,12,13,14};
-        System.out.println(Arrays.toString(evenFromArray1(numbers)));
-        System.out.println(Arrays.toString(evenFromArray2(numbers)));
+    public static int[]  sumUpToZero(int n){
+        int[] res = new int[n];
+        for (int i = 0; i < res.length-1; i++) {
+            res[i++]=i;
+            res[i]=-i;
+        }
+        return  res;
+    }
 
-        System.out.println(FINRA(11));
+    public static int[] generateArray(int N) {
+        int[] arr = new int[N];
+        // generating N/2 negative and N/2 positive
+        for (int i = 0; i < N / 2; i++) {
+            arr[i] = -(i + 1);
+            arr[i + N / 2] = i + 1;
+        }
+        return arr;
+    }
+
+    public static int[] moveZerosToEnd(int[] arr) {
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {  // move non-zero elements to the front
+            if (arr[i] != 0) {
+                arr[index] = arr[i];
+                index++;
+            }
+        }
+        while (index < arr.length) {  // Fill the remaining positions with zeros
+            arr[index] = 0;
+            index++;
+        }
+        return arr;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(Arrays.toString(sumUpToZero(4)));
+        System.out.println(Arrays.toString(generateArray(7)));
+        System.out.println("===================================================");
+        int[] nums= {4,0,5,0,0,7,6,0,8,6};
+        System.out.println(Arrays.toString(moveZerosToEnd(nums)));
+        System.out.println(EvenOdd2(102));
+        System.out.println(reverseStr("dlrow olleH"));
+
+        System.out.println(rev.reverse());
 
     }
 }
