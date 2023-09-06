@@ -78,7 +78,6 @@ public class Runner2 {
     }
 
     public static String reversed(String str){
-
         String result = "";
         for (int i = str.length()-1; i >= 0; i--) {
             result+= str.charAt(i);
@@ -87,12 +86,14 @@ public class Runner2 {
     }
 
 
+
     public static void main(String[] args) {
+
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
 
         System.out.println(freqChar("aaaAaHHgOOgguurrrroooo"));
 
-        System.out.println(noDuplication("fFFffuuuUUccCCckkk"));
+        System.out.println(noDuplication("agrFffuuuUUccCCckkk"));
 
         System.out.println(reverseAnyInt(-654321));
 

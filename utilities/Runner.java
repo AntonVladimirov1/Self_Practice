@@ -102,17 +102,41 @@ public class Runner {
         return arr;
     }
 
+
+    public static String findRepetitiveSubstring(String input) {
+            int n = input.length();
+
+            for (int len = 1; len <= n / 2; len++) {
+                String candidate = input.substring(0, len);
+                int repetitions = n / len;
+                String repeatedCandidate = "";
+
+                for (int i = 0; i < repetitions; i++) {
+                    repeatedCandidate += candidate;
+                }
+
+                if (repeatedCandidate.equals(input)) {
+                    return candidate;
+                }
+            }
+
+            return "There is no repetitive substring";
+        }
+
     public static void main(String[] args) {
 
-        System.out.println(Arrays.toString(sumUpToZero(4)));
+        System.out.println(findRepetitiveSubstring("abcabcabcabcabcabc"));
+
+       /* System.out.println(Arrays.toString(sumUpToZero(4)));
         System.out.println(Arrays.toString(generateArray(7)));
         System.out.println("===================================================");
         int[] nums= {4,0,5,0,0,7,6,0,8,6};
         System.out.println(Arrays.toString(moveZerosToEnd(nums)));
         System.out.println(EvenOdd2(102));
         System.out.println(reverseStr("dlrow olleH"));
-
         System.out.println(rev.reverse());
+
+        */
 
     }
 }
