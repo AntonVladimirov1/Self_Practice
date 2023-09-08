@@ -24,7 +24,8 @@ public class Runner2 {
            int lastDigit = number % 10;
             reverse = reverse * 10 + lastDigit;
             number = number / 10;
-        } return isNegative ? reverse*-1 : reverse;
+        }
+        return isNegative ? reverse*-1 : reverse;
     }
 
     public static int reverseAnyInt(int num){  // Reverse Integer (any)
@@ -51,18 +52,17 @@ public class Runner2 {
     public static String freqChar(String str){
         String result = "";
         str = str.toLowerCase();
-        for (int j = 0; j < str.length(); j++) {
-            char ch = str.charAt(j);
+        for (int a = 0; a < str.length(); a++) {
             int count = 0;
-            for (int i =0; i< str.length(); i++){
-                if (str.charAt(i) == ch ){
+            for (int b =0; b< str.length(); b++){
+                if (str.charAt(b) == str.charAt(a) ){
                     count++;
                 }
             }
-            if (result.contains(ch+"")){  // to avoid duplication
+            if (result.contains(str.charAt(a)+"")){  // to avoid duplication
                 continue;
             }
-            result+= ch+ "" +count+ " ";
+            result+= str.charAt(a)+ "" +count+ " ";
         }
         return result;
     }
@@ -88,10 +88,14 @@ public class Runner2 {
 
 
     public static void main(String[] args) {
+        String str ="gnihtemos";  // simple String reverse
+        String rvsd = "";
+        for (int i = str.length()-1; i >=0 ; i--) {
+            rvsd+=str.charAt(i);
+        }
+        System.out.println(rvsd);
 
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
-
-        System.out.println(freqChar("aaaAaHHgOOgguurrrroooo"));
 
         System.out.println(noDuplication("agrFffuuuUUccCCckkk"));
 
@@ -106,6 +110,7 @@ public class Runner2 {
 
         System.out.println(reversed("emOClew"));
 
+        System.out.println(freqChar("aafabbbklddccccFFFFF"));
     }
 
 }

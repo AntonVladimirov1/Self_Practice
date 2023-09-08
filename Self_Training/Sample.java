@@ -12,5 +12,6 @@ public class Sample {   // Haha ....Good advise!!!
                 System.out.println("See you next week");
 
         }
+
     }
 }

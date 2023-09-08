@@ -23,4 +23,5 @@ public class DoWhileLoop2 {
         }while (!(u.equals("User") && p.equals("Pass")));
 
     }
+
 }
