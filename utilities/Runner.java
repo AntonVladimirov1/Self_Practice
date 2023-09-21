@@ -87,7 +87,19 @@ public class Runner {
         return arr;
     }
 
-    public static int[] moveZerosToEnd(int[] arr) {
+    public static int[] moveZerosToEnd(int[] arr){
+        int[] result = new int[arr.length];
+        int count = 0;
+
+        for (int each : arr) {
+            if (each != 0) {
+                result[count++] = each;
+            }
+        }
+        return result;
+    }
+
+    public static int[] moveZerosToEnd2(int[] arr) {
         int index = 0;
         for (int i = 0; i < arr.length; i++) {  // move non-zero elements to the front
             if (arr[i] != 0) {
@@ -102,7 +114,6 @@ public class Runner {
         return arr;
     }
 
-
     public static String findRepetitiveSubstring(String input) {
             int n = input.length();
 
@@ -114,18 +125,18 @@ public class Runner {
                 for (int i = 0; i < repetitions; i++) {
                     repeatedCandidate += candidate;
                 }
-
                 if (repeatedCandidate.equals(input)) {
                     return candidate;
                 }
             }
-
             return "There is no repetitive substring";
         }
 
     public static void main(String[] args) {
+        int[] nums = {1,0,2,0,3};
+        System.out.println(Arrays.toString(moveZerosToEnd(nums)));
 
-        System.out.println(findRepetitiveSubstring("abcabcabcabcabcabc"));
+        // System.out.println(findRepetitiveSubstring("abcabcabcabcabcabc"));
 
        /* System.out.println(Arrays.toString(sumUpToZero(4)));
         System.out.println(Arrays.toString(generateArray(7)));
@@ -135,10 +146,10 @@ public class Runner {
         System.out.println(EvenOdd2(102));
         System.out.println(reverseStr("dlrow olleH"));
         System.out.println(rev.reverse());
-
         */
 
     }
 }
+
 
 

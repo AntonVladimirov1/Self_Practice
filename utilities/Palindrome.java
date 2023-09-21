@@ -11,4 +11,5 @@ public class Palindrome { // anna, racecar - can be read the same from begin and
         }
         return true;
     }
+
 }

@@ -1,6 +1,8 @@
 package utilities;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Runner2 {
 
@@ -88,7 +90,17 @@ public class Runner2 {
 
 
     public static void main(String[] args) {
-        String str ="gnihtemos";  // simple String reverse
+
+        String str = "Hello, World!";         // freqChar (Collection)
+        Map<Character, Integer> counts = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            counts.put(c, counts.getOrDefault(c, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> entry : counts.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+
+       /* String str ="gnihtemos";  // simple String reverse
         String rvsd = "";
         for (int i = str.length()-1; i >=0 ; i--) {
             rvsd+=str.charAt(i);
@@ -111,6 +123,8 @@ public class Runner2 {
         System.out.println(reversed("emOClew"));
 
         System.out.println(freqChar("aafabbbklddccccFFFFF"));
+
+        */
     }
 
 }
