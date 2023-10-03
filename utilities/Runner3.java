@@ -31,7 +31,6 @@ public class Runner3 {
         return (intCount+decimalCount)*sign;
     }
 
-
     public static int[] sortASC(int[] arr) {
         // Perform selection sort
         for (int i = 0; i < arr.length - 1; i++) {
@@ -49,6 +48,7 @@ public class Runner3 {
         }
         return arr;
     }
+
     public static int[] sortDESC(int[] arr) {
         // Perform selection sort
         for (int i = 0; i < arr.length - 1; i++) {

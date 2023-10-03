@@ -3,8 +3,19 @@ package utilities;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class Runner2 {
+
+    public static boolean isPalindrome(String str){
+        str=str.toLowerCase();
+        for (int begin = 0,end = str.length()-1; begin <str.length()/2 ; begin++, end--) {
+            if (str.charAt(begin) != str.charAt(end)){
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static boolean isPrime(int num){
         if (num<=1)
@@ -100,12 +111,12 @@ public class Runner2 {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
 
-       /* String str ="gnihtemos";  // simple String reverse
-        String rvsd = "";
-        for (int i = str.length()-1; i >=0 ; i--) {
-            rvsd+=str.charAt(i);
-        }
-        System.out.println(rvsd);
+        StringBuilder coolStuff = new StringBuilder("emoclew");    //* very cool thing!!!
+        System.out.println(coolStuff.reverse());
+
+        System.out.println(reversed("emOClew"));
+
+        System.out.println(freqChar("aafabbbklddccccFFFFF"));
 
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
 
@@ -117,14 +128,12 @@ public class Runner2 {
 
         System.out.println(isPrime(11));
 
-        StringBuilder coolStuff = new StringBuilder("emoclew");    //* very cool thing!!!
-        System.out.println(coolStuff.reverse());
+        System.out.println(isPalindrome("racecar"));
 
-        System.out.println(reversed("emOClew"));
+        Random random = new Random();
+        int randomNumber = random.nextInt(100);   // randomly printing numbers
+        System.out.println(randomNumber);
 
-        System.out.println(freqChar("aafabbbklddccccFFFFF"));
-
-        */
     }
 
 }
