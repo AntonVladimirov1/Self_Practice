@@ -75,7 +75,19 @@ public class Runner2 {
             if (result.contains(str.charAt(a)+"")){  // to avoid duplication
                 continue;
             }
-            result+= str.charAt(a)+ "" +count+ " ";
+            result+= str.charAt(a)+ ":" +count+ " ";
+        }
+        return result;
+    }
+
+    public static String freqOfCharCollection(String str){
+        String result="";
+        Map<Character, Integer> counts = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            counts.put(c, counts.getOrDefault(c, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> entry : counts.entrySet()) {
+            result+=entry.getKey() + ":" + entry.getValue()+" ";
         }
         return result;
     }
@@ -98,25 +110,31 @@ public class Runner2 {
         return result;
     }
 
+    public static int sumOfTwoDigits(int n){
+        int sum = n / 10 + n % 10;
+        return sum;
+    }
 
-
-    public static void main(String[] args) {
-
-        String str = "Hello, World!";         // freqChar (Collection)
-        Map<Character, Integer> counts = new HashMap<>();
-        for (char c : str.toCharArray()) {
-            counts.put(c, counts.getOrDefault(c, 0) + 1);
+    public static int sumOfManyDigits(int a){
+        int sum = 0;
+        String b=""+ a;
+        //System.out.println("b = " + b);
+        for (int i = 0; i < b.length(); i++) {
+            sum= sum + Integer.parseInt(""+b.charAt(i));
         }
-        for (Map.Entry<Character, Integer> entry : counts.entrySet()) {
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
+        return sum;
+    }
 
-        StringBuilder coolStuff = new StringBuilder("emoclew");    //* very cool thing!!!
-        System.out.println(coolStuff.reverse());
 
+
+public static void main(String[] args) {
+
+    StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
+        System.out.println(StrReversed.reverse());
         System.out.println(reversed("emOClew"));
 
-        System.out.println(freqChar("aafabbbklddccccFFFFF"));
+        System.out.println(freqChar("collection"));
+        System.out.println(freqOfCharCollection("collection"));
 
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
 
@@ -131,8 +149,12 @@ public class Runner2 {
         System.out.println(isPalindrome("racecar"));
 
         Random random = new Random();
-        int randomNumber = random.nextInt(100);   // randomly printing numbers
+        int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
         System.out.println(randomNumber);
+
+        System.out.println(sumOfTwoDigits(55));
+
+        System.out.println(sumOfManyDigits(5555));
 
     }
 
