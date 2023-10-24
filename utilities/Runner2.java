@@ -138,7 +138,7 @@ public static void main(String[] args) {
 
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
 
-        System.out.println(noDuplication("agrFffuuuUUccCCckkk"));
+        System.out.println(noDuplication("argFffuuuUUccCCckkkit"));
 
         System.out.println(reverseAnyInt(-654321));
 
