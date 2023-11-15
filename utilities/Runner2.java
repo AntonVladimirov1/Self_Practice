@@ -127,6 +127,7 @@ public class Runner2 {
 
 
 
+
 public static void main(String[] args) {
 
     StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
@@ -157,5 +158,6 @@ public static void main(String[] args) {
         System.out.println(sumOfManyDigits(5555));
 
     }
+
 
 }
