@@ -16,6 +16,10 @@ public class Runner2 {
         }
         return true;
     }
+    public static boolean isPalindrome2(String str) {
+            String reversed = new StringBuilder(str).reverse().toString();
+            return str.equals(reversed);
+        }
 
     public static boolean isPrime(int num){
         if (num<=1)
@@ -103,6 +107,7 @@ public class Runner2 {
     }
 
     public static String reversed(String str){
+        str= str.toLowerCase();
         String result = "";
         for (int i = str.length()-1; i >= 0; i--) {
             result+= str.charAt(i);
@@ -132,7 +137,7 @@ public static void main(String[] args) {
 
     StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
         System.out.println(StrReversed.reverse());
-        System.out.println(reversed("emOClew"));
+        System.out.println(reversed("emOClew uoy kcuf"));
 
         System.out.println(freqChar("collection"));
         System.out.println(freqOfCharCollection("collection"));
@@ -157,7 +162,9 @@ public static void main(String[] args) {
 
         System.out.println(sumOfManyDigits(5555));
 
-    }
+        System.out.println(isPalindrome2("anna"));
+
+}
 
 
 }

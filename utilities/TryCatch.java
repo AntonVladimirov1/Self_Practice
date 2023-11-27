@@ -23,5 +23,5 @@ public class TryCatch {
             System.out.println("3"); // This line prints "3" to the console.
         }
     }
-
+        // Output - A 1 2 3 X B
 }

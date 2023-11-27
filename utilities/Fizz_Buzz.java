@@ -16,7 +16,7 @@ public class Fizz_Buzz {
               if(n % 5 == 0){
                      result += "Buzz";
               }
-              return (result.isEmpty() ? n : result) + "!";
+              return (result.isEmpty() ? n : result)+"";
        }
 
 }
