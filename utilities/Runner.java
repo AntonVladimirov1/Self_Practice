@@ -15,31 +15,18 @@ public class Runner {
         return result;
     }
 
-    public static String FINRA(int num){
-        String result ="";
-        for (int i = 1; i <= num ; i++) {
-            if (i%3==0 && i%5==0){
-                result=(i+" =FINRA");
-            } else if (i%3==0) {
-                result=(i+" =FIN");
-            } else if (i%5==0) {
-                result=(i+" =RA");
-            }else {
-                result=("No option for - "+i);
+    public static String FinRa_FizBuzz(int num){
+        String result = "";
+
+             if (num%3==0) {
+                result +="FIN";
+            } if (num%5==0) {
+                result +="RA";
             }
-        }
-        return result;
+             return (result.isEmpty() ? "No result for "+num : result);
     }
 
-    public static void EvenOdd(int num){
-        if (num%2==0){
-            System.out.println(num+" - is even number");
-        }else {
-            System.out.println(num+" - is odd number");
-        }
-    }
-
-    public static String EvenOdd2(int num){
+    public static String EvenOdd(int num){
         return (num%2==0)? num+" is Even": num+" is Odd";
     }
 
@@ -116,7 +103,6 @@ public class Runner {
 
     public static String findRepetitiveSubstring(String input) {
             int n = input.length();
-
             for (int len = 1; len <= n / 2; len++) {
                 String candidate = input.substring(0, len);
                 int repetitions = n / len;
@@ -135,18 +121,15 @@ public class Runner {
     public static void main(String[] args) {
         int[] nums = {1,0,2,0,3};
         System.out.println(Arrays.toString(moveZerosToEnd(nums)));
-
-        // System.out.println(findRepetitiveSubstring("abcabcabcabcabcabc"));
-
-       /* System.out.println(Arrays.toString(sumUpToZero(4)));
+        System.out.println(findRepetitiveSubstring("abcabcabcabcabcabc"));
+        System.out.println(Arrays.toString(sumUpToZero(4)));
         System.out.println(Arrays.toString(generateArray(7)));
-        System.out.println("===================================================");
-        int[] nums= {4,0,5,0,0,7,6,0,8,6};
-        System.out.println(Arrays.toString(moveZerosToEnd(nums)));
-        System.out.println(EvenOdd2(102));
+        int[] nums2= {4,0,5,0,0,7,6,0,8,6};
+        System.out.println(Arrays.toString(moveZerosToEnd(nums2)));
+        System.out.println(EvenOdd(102));
         System.out.println(reverseStr("dlrow olleH"));
         System.out.println(rev.reverse());
-        */
+        System.out.println(FinRa_FizBuzz(5));
 
     }
 }

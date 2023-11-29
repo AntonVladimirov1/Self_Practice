@@ -1,9 +1,6 @@
 package utilities;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class Runner2 {
 
@@ -17,9 +14,21 @@ public class Runner2 {
         return true;
     }
     public static boolean isPalindrome2(String str) {
+        str=str.toLowerCase();
             String reversed = new StringBuilder(str).reverse().toString();
             return str.equals(reversed);
         }
+
+    public static String FinRa_FizBuzz(int num){
+        String result ="";
+
+        if (num%3==0) {
+            result +="FIN";
+        } if (num%5==0) {
+            result +="RA";
+        }
+        return (result.isEmpty() ? "No result for "+num : result);
+    }
 
     public static boolean isPrime(int num){
         if (num<=1)
@@ -29,6 +38,25 @@ public class Runner2 {
                 return false;
         }
         return true;
+    }
+
+    public static boolean isAnagram(String a, String b) {
+        if (a.length() != b.length()) {  // Check if the lengths of the strings are equal
+            return false;                // otherwise it's not anagram anyway
+        }
+        char[] aArr = a.toCharArray(); // Convert strings to char arrays and sort them
+        char[] bArr = b.toCharArray();
+        Arrays.sort(aArr);
+        Arrays.sort(bArr);
+        return Arrays.equals(aArr, bArr); // Compare the sorted arrays
+    }
+    public static boolean isAnagramTreeSet(String a, String b){
+        if(a.length() != b.length()){
+            return false;
+        }
+        Set<String> a1 =  new TreeSet<>(Arrays.asList(a.split("")));
+        Set<String> b1 =  new TreeSet<>(Arrays.asList(b.split("")));
+        return a1.equals(b1);
     }
 
     public static int reverseInt(int number) {
@@ -83,7 +111,6 @@ public class Runner2 {
         }
         return result;
     }
-
     public static String freqOfCharCollection(String str){
         String result="";
         Map<Character, Integer> counts = new HashMap<>();
@@ -138,33 +165,25 @@ public static void main(String[] args) {
     StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
         System.out.println(StrReversed.reverse());
         System.out.println(reversed("emOClew uoy kcuf"));
-
         System.out.println(freqChar("collection"));
         System.out.println(freqOfCharCollection("collection"));
-
         System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
-
         System.out.println(noDuplication("argFffuuuUUccCCckkkit"));
-
         System.out.println(reverseAnyInt(-654321));
-
         System.out.println(reverseInt(-1234567));
-
         System.out.println(isPrime(11));
 
-        System.out.println(isPalindrome("racecar"));
-
-        Random random = new Random();
+    Random random = new Random();
         int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
         System.out.println(randomNumber);
-
         System.out.println(sumOfTwoDigits(55));
-
         System.out.println(sumOfManyDigits(5555));
-
-        System.out.println(isPalindrome2("anna"));
+        System.out.println(isPalindrome("raCecar"));
+        System.out.println(isPalindrome2("anNa"));
+        System.out.println(FinRa_FizBuzz(15));
+        System.out.println(isAnagram("anagram", "margana"));
+        System.out.println(isAnagramTreeSet("anagram", "margana"));
 
 }
-
 
 }

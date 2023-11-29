@@ -23,9 +23,9 @@ public class Bot {
                case "what is your age":
                    System.out.println("I was programmed in March");break;
                case "who create you":
-                   System.out.println("I was created by Saim");break;
+                   System.out.println("I was created by AI");break;
                case "what can we talk about":
-                   System.out.println("I will respond to these:.............");break;
+                   System.out.println("I will respond to these: anything");break;
                case "off":
                    System.out.println("haha you cannot turn me off. I am invincible");break;
                case "shutdown":
