@@ -6,6 +6,18 @@ import java.util.Set;
 
 public class Runner {
 
+    public static String removeDuplicates(String str){
+        str=str.toLowerCase();
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (result.contains(""+str.charAt(i))){
+                continue;
+            }
+            result += str.charAt(i);
+        }
+        return result;
+    }
+
     static StringBuilder rev = new StringBuilder("dlrow olleH");
 
     public static String reverseStr(String str){
@@ -171,6 +183,7 @@ public class Runner {
 
         return encryptedArray;
     }
+
 
     public static void main(String[] args) {
 

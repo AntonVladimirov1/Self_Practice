@@ -24,6 +24,18 @@ public class Runner2 {
         return (result.isEmpty() ? "No result for "+num : result);
     }
 
+    public static String removeDuplicates(String str){
+        str=str.toLowerCase();
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (result.contains(""+str.charAt(i))){
+                continue;
+            }
+            result += str.charAt(i);
+        }
+        return result;
+    }
+
     public static boolean isPalindrome(String str){
         str=str.toLowerCase();
         for (int begin = 0,end = str.length()-1; begin <str.length()/2 ; begin++, end--) {
