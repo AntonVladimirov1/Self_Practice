@@ -4,6 +4,26 @@ import java.util.*;
 
 public class Runner2 {
 
+    public static String reversed(String str){
+        str= str.toLowerCase();
+        String result = "";
+        for (int i = str.length()-1; i >= 0; i--) {
+            result+= str.charAt(i);
+        }
+        return result;
+    }
+
+    public static String FinRa_FizBuzz(int num){
+        String result ="";
+
+        if (num%3==0) {
+            result +="FIN";
+        } if (num%5==0) {
+            result +="RA";
+        }
+        return (result.isEmpty() ? "No result for "+num : result);
+    }
+
     public static boolean isPalindrome(String str){
         str=str.toLowerCase();
         for (int begin = 0,end = str.length()-1; begin <str.length()/2 ; begin++, end--) {
@@ -18,17 +38,6 @@ public class Runner2 {
             String reversed = new StringBuilder(str).reverse().toString();
             return str.equals(reversed);
         }
-
-    public static String FinRa_FizBuzz(int num){
-        String result ="";
-
-        if (num%3==0) {
-            result +="FIN";
-        } if (num%5==0) {
-            result +="RA";
-        }
-        return (result.isEmpty() ? "No result for "+num : result);
-    }
 
     public static boolean isPrime(int num){
         if (num<=1)
@@ -57,6 +66,31 @@ public class Runner2 {
         Set<String> a1 =  new TreeSet<>(Arrays.asList(a.split("")));
         Set<String> b1 =  new TreeSet<>(Arrays.asList(b.split("")));
         return a1.equals(b1);
+    }
+    public static boolean compareStrings(String str1,String str2){
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+        char[] chars1 = str1.toCharArray();
+        char[] chars2 = str2.toCharArray();
+        Arrays.sort(chars1);
+        Arrays.sort(chars2);
+        return Arrays.equals(chars1,chars2);
+    }
+
+    private static void isPanagram(String str) {
+        str=str.toLowerCase();
+        str=str.replace(" ","");
+        Set<Character> panagramSet = new HashSet<>();
+        for (char c : str.toCharArray()) {
+            if(c>=97 && c<=122){
+                panagramSet.add(c);
+            }
+        }
+        if(panagramSet.size()==26){
+            System.out.println( str +" (size = " +panagramSet.size()+") || Panagram");
+        }else {
+            System.out.println( str +" (size = " +panagramSet.size()+") || NOT Panagram");
+        }
     }
 
     public static int reverseInt(int number) {
@@ -123,25 +157,6 @@ public class Runner2 {
         return result;
     }
 
-    public static Boolean compareStrings(String str1,String str2){
-        str1 = str1.toLowerCase();
-        str2 = str2.toLowerCase();
-        char[] chars1 = str1.toCharArray();
-        char[] chars2 = str2.toCharArray();
-        Arrays.sort(chars1);
-        Arrays.sort(chars2);
-        return Arrays.equals(chars1,chars2);
-    }
-
-    public static String reversed(String str){
-        str= str.toLowerCase();
-        String result = "";
-        for (int i = str.length()-1; i >= 0; i--) {
-            result+= str.charAt(i);
-        }
-        return result;
-    }
-
     public static int sumOfTwoDigits(int n){
         int sum = n / 10 + n % 10;
         return sum;
@@ -157,32 +172,111 @@ public class Runner2 {
         return sum;
     }
 
+    public static String EvenOdd(int num){
+        return (num%2==0)? num+" is Even": num+" is Odd";
+    }
 
+    public static int[] evenFromArray1(int[] arr) {
+        int count = 0;
+        // Count the number of even numbers in the array
+        for (int i : arr) {
+            if (i % 2 == 0) {
+                count++;
+            }
+        }
+        // Create a new array to store the even numbers
+        int[] evenNum = new int[count];
+        // Fill the new array with the even numbers from the original array
+        int k = 0;
+        for (int i : arr) {
+            if (i % 2 == 0) {
+                evenNum[k] = i;
+                k++;
+            }
+        }
+        return evenNum;
+    }
 
+    public static int[] evenFromArray2(int[] arr) {
+        return Arrays.stream(arr).filter(num -> num % 2 == 0).toArray();
+    }
+
+    public static int[]  sumUpToZero(int n){
+        int[] res = new int[n];
+        for (int i = 0; i < res.length-1; i++) {
+            res[i++]=i;
+            res[i]=-i;
+        }
+        return  res;
+    }
+
+    public static int[] generateArray(int N) {
+        int[] arr = new int[N];
+        // generating N/2 negative and N/2 positive
+        for (int i = 0; i < N / 2; i++) {
+            arr[i] = -(i + 1);
+            arr[i + N / 2] = i + 1;
+        }
+        return arr;
+    }
+
+    public static int[] moveZerosToEnd(int[] arr){
+        int[] result = new int[arr.length];
+        int count = 0;
+
+        for (int each : arr) {
+            if (each != 0) {
+                result[count++] = each;
+            }
+        }
+        return result;
+    }
+
+    public static int[] moveZerosToEnd2(int[] arr) {
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {  // move non-zero elements to the front
+            if (arr[i] != 0) {
+                arr[index] = arr[i];
+                index++;
+            }
+        }
+        while (index < arr.length) {  // Fill the remaining positions with zeros
+            arr[index] = 0;
+            index++;
+        }
+        return arr;
+    }
+
+    public static String findRepetitiveSubstring(String input) {
+        int n = input.length();
+        for (int len = 1; len <= n / 2; len++) {
+            String candidate = input.substring(0, len);
+            int repetitions = n / len;
+            String repeatedCandidate = "";
+
+            for (int i = 0; i < repetitions; i++) {
+                repeatedCandidate += candidate;
+            }
+            if (repeatedCandidate.equals(input)) {
+                return candidate;
+            }
+        }
+        return "There is no repetitive substring";
+    }
+
+// ============================================================================================================================
 
 public static void main(String[] args) {
 
     StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
         System.out.println(StrReversed.reverse());
-        System.out.println(reversed("emOClew uoy kcuf"));
-        System.out.println(freqChar("collection"));
-        System.out.println(freqOfCharCollection("collection"));
-        System.out.println(compareStrings("ABEFgcd", "abcdEFg"));
-        System.out.println(noDuplication("argFffuuuUUccCCckkkit"));
-        System.out.println(reverseAnyInt(-654321));
-        System.out.println(reverseInt(-1234567));
-        System.out.println(isPrime(11));
 
     Random random = new Random();
         int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
         System.out.println(randomNumber);
-        System.out.println(sumOfTwoDigits(55));
-        System.out.println(sumOfManyDigits(5555));
-        System.out.println(isPalindrome("raCecar"));
-        System.out.println(isPalindrome2("anNa"));
-        System.out.println(FinRa_FizBuzz(15));
-        System.out.println(isAnagram("anagram", "margana"));
-        System.out.println(isAnagramTreeSet("anagram", "margana"));
+
+    isPanagram("abcdefgjhkilmnopqrstuvwxyz");
+
 
 }
 

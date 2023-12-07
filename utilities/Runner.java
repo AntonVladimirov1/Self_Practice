@@ -1,12 +1,15 @@
 package utilities;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Runner {
 
     static StringBuilder rev = new StringBuilder("dlrow olleH");
 
     public static String reverseStr(String str){
+        str=str.toLowerCase();
         String result="";
 
         for (int i = str.length()-1; i >=0 ; i--) {
@@ -118,18 +121,60 @@ public class Runner {
             return "There is no repetitive substring";
         }
 
+    private static void isPanagram(String word) {
+        String wordR= word;
+        word=word.toLowerCase();
+        word=word.replace(" ","");
+        Set<Character> panagramSet = new HashSet<>();
+        for (char c : word.toCharArray()) {
+            if(c>=97 && c<=122){
+                panagramSet.add(c);
+            }
+        }
+        if(panagramSet.size()==26){
+            System.out.println(wordR+" size = " +panagramSet.size()+" || Panagram");
+        }else {
+            System.out.println(wordR+" size = " +panagramSet.size()+" || NOT Panagram");
+        }
+    }
+
+    public static void printEncryptedArray(int[] encryptedArray) {
+        if (encryptedArray == null || encryptedArray.length == 0) {
+            System.out.println("Array is null");
+        }
+        for (int i = 0; i < encryptedArray.length; i++) {
+            System.out.println(encryptedArray[i] + " ");
+        }
+    }
+
+    public static int[] createEncryptedArray(int arr[]) {
+        if (arr == null || arr.length == 0) {
+            return null;
+        }
+
+        int n = arr.length;
+        int[] encryptedArray = new int[n];
+
+        // Calculate the product of all elements to the left of the current index
+        int leftProduct = 1;
+        for (int i = 0; i < n; i++) {
+            encryptedArray[i] = leftProduct;
+            leftProduct *= arr[i];
+        }
+
+        // Calculate the product of all elements to the right of the current index
+        int rightProduct = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            encryptedArray[i] *= rightProduct;
+            rightProduct *= arr[i];
+        }
+
+        return encryptedArray;
+    }
+
     public static void main(String[] args) {
-        int[] nums = {1,0,2,0,3};
-        System.out.println(Arrays.toString(moveZerosToEnd(nums)));
-        System.out.println(findRepetitiveSubstring("abcabcabcabcabcabc"));
-        System.out.println(Arrays.toString(sumUpToZero(4)));
-        System.out.println(Arrays.toString(generateArray(7)));
-        int[] nums2= {4,0,5,0,0,7,6,0,8,6};
-        System.out.println(Arrays.toString(moveZerosToEnd(nums2)));
-        System.out.println(EvenOdd(102));
-        System.out.println(reverseStr("dlrow olleH"));
-        System.out.println(rev.reverse());
-        System.out.println(FinRa_FizBuzz(5));
+
+        isPanagram("the sting pack my box with five dozen liquor jugs");
 
     }
 }

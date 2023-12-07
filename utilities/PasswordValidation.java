@@ -17,7 +17,7 @@ public class PasswordValidation {
 
     public static void main(String[] args) {
 
-        System.out.println(validPassword("Av@5mk"));
+        System.out.println(validPassword("Av.5mjkJH"));
     }
 
 }
