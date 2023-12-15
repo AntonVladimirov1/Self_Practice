@@ -128,7 +128,7 @@ public class Runner2 {
         return reversed;
     }
 
-    public static String noDuplication(String str){
+    /*public static String noDuplication(String str){
         String result = "";
         str = str.toLowerCase();
         for (int i = 0; i < str.length(); i++) {
@@ -139,6 +139,8 @@ public class Runner2 {
         }
         return result;
     }
+
+     */
 
     public static String freqChar(String str){
         String result = "";
@@ -222,6 +224,17 @@ public class Runner2 {
         return  res;
     }
 
+    public static String[] removeDuplicatesArray(String[] array) {
+        // Convert the array to a Set to automatically remove duplicates
+        Set<String> set = new HashSet<>(Arrays.asList(array));
+
+        // Convert the Set back to an array
+        String[] uniqueArray = new String[set.size()];
+        set.toArray(uniqueArray);
+
+        return uniqueArray;
+    }
+
     public static int[] generateArray(int N) {
         int[] arr = new int[N];
         // generating N/2 negative and N/2 positive
@@ -287,9 +300,12 @@ public static void main(String[] args) {
         int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
         System.out.println(randomNumber);
 
-    isPanagram("abcdefgjhkilmnopqrstuvwxyz");
+    String[] original = {"kuku","vasya","kuku"};
+    System.out.println(Arrays.toString(removeDuplicatesArray(original)));
+
+
+    }
 
 
 }
 
-}
