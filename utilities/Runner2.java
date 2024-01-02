@@ -79,6 +79,7 @@ public class Runner2 {
         Set<String> b1 =  new TreeSet<>(Arrays.asList(b.split("")));
         return a1.equals(b1);
     }
+
     public static boolean compareStrings(String str1,String str2){
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
@@ -128,19 +129,22 @@ public class Runner2 {
         return reversed;
     }
 
-    /*public static String noDuplication(String str){
-        String result = "";
-        str = str.toLowerCase();
-        for (int i = 0; i < str.length(); i++) {
-            if (result.contains(str.charAt(i)+"")){
-                continue;
-            }
-            result+= str.charAt(i);
-        }
-        return result;
-    }
+    private static void bubbleSortArray(int[] arr) {
 
-     */
+        //Arrays.stream(arr).sorted();
+        int temp = 0;
+        for (int x = 0; x < arr.length; x++) {
+
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    temp = arr[i + 1];
+                    arr[i + 1] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 
     public static String freqChar(String str){
         String result = "";
@@ -234,6 +238,22 @@ public class Runner2 {
 
         return uniqueArray;
     }
+    public static int[] removeDuplicatesArray_sort(int[] inputArray) {
+        // Remove duplicates
+        Set<Integer> set = new HashSet<>();
+        for (int num : inputArray) {
+            set.add(num);
+        }
+        // Convert set to array
+        int[] uniqueArray = new int[set.size()];
+        int index = 0;
+        for (int num : set) {
+            uniqueArray[index++] = num;
+        }
+        // Sort the array in ascending order
+        Arrays.sort(uniqueArray);
+        return uniqueArray;
+    }
 
     public static int[] generateArray(int N) {
         int[] arr = new int[N];
@@ -303,8 +323,14 @@ public static void main(String[] args) {
     String[] original = {"kuku","vasya","kuku"};
     System.out.println(Arrays.toString(removeDuplicatesArray(original)));
 
+    int[] example = {45,78,1,25,32,43};
+    System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
 
-    }
+    int[] arr2 = {10,5,1,9,2,7,3,6,8,4};
+    bubbleSortArray(arr2);
+
+
+}
 
 
 }
