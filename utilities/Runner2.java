@@ -12,6 +12,8 @@ public class Runner2 {
         }
         return result;
     }
+    //StringBuilder StrReversed = new StringBuilder("emoclew");
+        //System.out.println(StrReversed.reverse());
 
     public static String FinRa_FizBuzz(int num){
         String result ="";
@@ -22,6 +24,10 @@ public class Runner2 {
             result +="RA";
         }
         return (result.isEmpty() ? "No result for "+num : result);
+    }
+
+    public static String EvenOdd(int num){
+        return (num%2==0)? num+" is Even": num+" is Odd";
     }
 
     public static String removeDuplicates(String str){
@@ -190,10 +196,6 @@ public class Runner2 {
         return sum;
     }
 
-    public static String EvenOdd(int num){
-        return (num%2==0)? num+" is Even": num+" is Odd";
-    }
-
     public static int[] evenFromArray1(int[] arr) {
         int count = 0;
         // Count the number of even numbers in the array
@@ -204,7 +206,7 @@ public class Runner2 {
         }
         // Create a new array to store the even numbers
         int[] evenNum = new int[count];
-        // Fill the new array with the even numbers from the original array
+        // Fill up new array with the even numbers from the original array
         int k = 0;
         for (int i : arr) {
             if (i % 2 == 0) {
@@ -309,29 +311,42 @@ public class Runner2 {
         return "There is no repetitive substring";
     }
 
+    public static String threeCopiesOfFront(String str) {
+        if (str.length() >= 3) {
+            String front = str.substring(0, 3);
+            return front + front + front;
+        } else {
+            // Handle the case where the input string is less than 3 characters
+            return str+str+str;
+        }
+    }
+
 // ============================================================================================================================
 
-public static void main(String[] args) {
+        public static void main (String[]args){
 
-    StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
-        System.out.println(StrReversed.reverse());
+            StringBuilder StrReversed = new StringBuilder("emoclew");    //* very cool thing!!!
+            System.out.println(StrReversed.reverse());
 
-    Random random = new Random();
-        int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
-        System.out.println(randomNumber);
+            Random random = new Random();
+            int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
+            System.out.println(randomNumber);
 
-    String[] original = {"kuku","vasya","kuku"};
-    System.out.println(Arrays.toString(removeDuplicatesArray(original)));
+            String[] original = {"kuku", "vasya", "kuku"};
+            System.out.println(Arrays.toString(removeDuplicatesArray(original)));
 
-    int[] example = {45,78,1,25,32,43};
-    System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
+            int[] example = {45, 78, 1, 25, 32, 43};
+            System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
 
-    int[] arr2 = {10,5,1,9,2,7,3,6,8,4};
-    bubbleSortArray(arr2);
+            int[] arr2 = {10, 5, 1, 9, 2, 7, 3, 6, 8, 4};
+            bubbleSortArray(arr2);
+
+            System.out.println(Arrays.toString(evenFromArray2(arr2)));
+
+            System.out.println(isPrime(13));
+
+            System.out.println(threeCopiesOfFront("ch"));
 
 
-}
-
-
-}
-
+        }
+    }
