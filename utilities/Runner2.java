@@ -14,6 +14,27 @@ public class Runner2 {
     }
     //StringBuilder StrReversed = new StringBuilder("emoclew");
         //System.out.println(StrReversed.reverse());
+    public static int reverseInt(int number) {
+        boolean isNegative = number < 0;
+        if(isNegative){
+            number = number * -1;
+        }
+        int reverse = 0;
+        while (number >= 1) {
+            int lastDigit = number % 10;
+            reverse = reverse * 10 + lastDigit;
+            number = number / 10;
+        }
+        return isNegative ? reverse*-1 : reverse;
+    }
+    public static int reverseAnyInt(int num){  // Reverse Integer (any)
+        int reversed = 0;
+        for (; num !=0; num /=10){
+            int lastDigit = num % 10;
+            reversed = reversed *10 + lastDigit;
+        }
+        return reversed;
+    }
 
     public static String FinRa_FizBuzz(int num){
         String result ="";
@@ -40,6 +61,32 @@ public class Runner2 {
             result += str.charAt(i);
         }
         return result;
+    }
+    public static String[] removeDuplicatesArray(String[] array) {
+        // Convert the array to a Set to automatically remove duplicates
+        Set<String> set = new HashSet<>(Arrays.asList(array));
+
+        // Convert the Set back to an array
+        String[] uniqueArray = new String[set.size()];
+        set.toArray(uniqueArray);
+
+        return uniqueArray;
+    }
+    public static int[] removeDuplicatesArray_sort(int[] inputArray) {
+        // Remove duplicates
+        Set<Integer> set = new HashSet<>();
+        for (int num : inputArray) {
+            set.add(num);
+        }
+        // Convert set to array
+        int[] uniqueArray = new int[set.size()];
+        int index = 0;
+        for (int num : set) {
+            uniqueArray[index++] = num;
+        }
+        // Sort the array in ascending order
+        Arrays.sort(uniqueArray);
+        return uniqueArray;
     }
 
     public static boolean isPalindrome(String str){
@@ -112,29 +159,6 @@ public class Runner2 {
         }
     }
 
-    public static int reverseInt(int number) {
-        boolean isNegative = number < 0;
-        if(isNegative){
-            number = number * -1;
-        }
-        int reverse = 0;
-        while (number >= 1) {
-           int lastDigit = number % 10;
-            reverse = reverse * 10 + lastDigit;
-            number = number / 10;
-        }
-        return isNegative ? reverse*-1 : reverse;
-    }
-
-    public static int reverseAnyInt(int num){  // Reverse Integer (any)
-        int reversed = 0;
-        for (; num !=0; num /=10){
-            int lastDigit = num % 10;
-            reversed = reversed *10 + lastDigit;
-        }
-        return reversed;
-    }
-
     private static void bubbleSortArray(int[] arr) {
 
         //Arrays.stream(arr).sorted();
@@ -185,7 +209,6 @@ public class Runner2 {
         int sum = n / 10 + n % 10;
         return sum;
     }
-
     public static int sumOfManyDigits(int a){
         int sum = 0;
         String b=""+ a;
@@ -216,45 +239,17 @@ public class Runner2 {
         }
         return evenNum;
     }
-
     public static int[] evenFromArray2(int[] arr) {
         return Arrays.stream(arr).filter(num -> num % 2 == 0).toArray();
     }
 
-    public static int[]  sumUpToZero(int n){
-        int[] res = new int[n];
+    public static int[]  sumUpToZero(int num){
+        int[] res = new int[num];
         for (int i = 0; i < res.length-1; i++) {
             res[i++]=i;
             res[i]=-i;
         }
         return  res;
-    }
-
-    public static String[] removeDuplicatesArray(String[] array) {
-        // Convert the array to a Set to automatically remove duplicates
-        Set<String> set = new HashSet<>(Arrays.asList(array));
-
-        // Convert the Set back to an array
-        String[] uniqueArray = new String[set.size()];
-        set.toArray(uniqueArray);
-
-        return uniqueArray;
-    }
-    public static int[] removeDuplicatesArray_sort(int[] inputArray) {
-        // Remove duplicates
-        Set<Integer> set = new HashSet<>();
-        for (int num : inputArray) {
-            set.add(num);
-        }
-        // Convert set to array
-        int[] uniqueArray = new int[set.size()];
-        int index = 0;
-        for (int num : set) {
-            uniqueArray[index++] = num;
-        }
-        // Sort the array in ascending order
-        Arrays.sort(uniqueArray);
-        return uniqueArray;
     }
 
     public static int[] generateArray(int N) {
@@ -278,7 +273,6 @@ public class Runner2 {
         }
         return result;
     }
-
     public static int[] moveZerosToEnd2(int[] arr) {
         int index = 0;
         for (int i = 0; i < arr.length; i++) {  // move non-zero elements to the front
