@@ -39,5 +39,6 @@ public class Array_Second_Max_number {
         System.out.println(findSecondMax(numbers));
 
         System.out.println(findSecondMax777(numbers));
+
     }
 }

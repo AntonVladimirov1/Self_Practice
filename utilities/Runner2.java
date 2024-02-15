@@ -88,6 +88,10 @@ public class Runner2 {
         Arrays.sort(uniqueArray);
         return uniqueArray;
     }
+    public static int[] removeDuplicates_stream(int[] array){
+        Arrays.sort(array);
+        return Arrays.stream(array).distinct().toArray();
+    }
 
     public static boolean isPalindrome(String str){
         str=str.toLowerCase();
@@ -329,17 +333,13 @@ public class Runner2 {
             String[] original = {"kuku", "vasya", "kuku"};
             System.out.println(Arrays.toString(removeDuplicatesArray(original)));
 
-            int[] example = {45, 78, 1, 25, 32, 43};
+            int[] example = {45,8,1,25,32,43,45,1,1,32,25,8};
             System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
+            System.out.println(Arrays.toString(removeDuplicates_stream(example)));
 
             int[] arr2 = {10, 5, 1, 9, 2, 7, 3, 6, 8, 4};
             bubbleSortArray(arr2);
 
-            System.out.println(Arrays.toString(evenFromArray2(arr2)));
-
-            System.out.println(isPrime(13));
-
-            System.out.println(threeCopiesOfFront("ch"));
 
 
         }

@@ -2,7 +2,7 @@ package utilities;
 
 import java.util.Scanner;
 
-public class ArrayMinMaxNumber {
+public class MinMaxNumber {
 
     public static String minMaxNum(){
         String result="";
@@ -29,4 +29,5 @@ public class ArrayMinMaxNumber {
         input.close();
         return result;
     }
+
 }
