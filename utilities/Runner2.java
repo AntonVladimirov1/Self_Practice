@@ -88,7 +88,7 @@ public class Runner2 {
         Arrays.sort(uniqueArray);
         return uniqueArray;
     }
-    public static int[] removeDuplicates_stream(int[] array){
+    public static int[] removeDuplicatesArray_stream(int[] array){
         Arrays.sort(array);
         return Arrays.stream(array).distinct().toArray();
     }
@@ -102,7 +102,7 @@ public class Runner2 {
         }
         return true;
     }
-    public static boolean isPalindrome2(String str) {
+    public static boolean isPalindrome_builder(String str) {
         str=str.toLowerCase();
             String reversed = new StringBuilder(str).reverse().toString();
             return str.equals(reversed);
@@ -243,7 +243,7 @@ public class Runner2 {
         }
         return evenNum;
     }
-    public static int[] evenFromArray2(int[] arr) {
+    public static int[] evenFromArray2_stream(int[] arr) {
         return Arrays.stream(arr).filter(num -> num % 2 == 0).toArray();
     }
 
@@ -330,12 +330,12 @@ public class Runner2 {
             int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
             System.out.println(randomNumber);
 
-            String[] original = {"kuku", "vasya", "kuku"};
+            String[] original = {"kuku","vasya","kuku","vasya"};
             System.out.println(Arrays.toString(removeDuplicatesArray(original)));
 
             int[] example = {45,8,1,25,32,43,45,1,1,32,25,8};
             System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
-            System.out.println(Arrays.toString(removeDuplicates_stream(example)));
+            System.out.println(Arrays.toString(removeDuplicatesArray_stream(example)));
 
             int[] arr2 = {10, 5, 1, 9, 2, 7, 3, 6, 8, 4};
             bubbleSortArray(arr2);
