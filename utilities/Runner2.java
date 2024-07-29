@@ -93,6 +93,21 @@ public class Runner2 {
         return Arrays.stream(array).distinct().toArray();
     }
 
+    public static int extractNumbersReplace(String input){
+        // Replace all non-digit characters with an empty string
+        String numericString = input.replaceAll("[^\\d]", "");
+        // Convert the numeric string to an integer
+        return Integer.parseInt(numericString);
+    }
+    public static int extractNumbersLoop(String str){
+        String result = "";
+        for (char c : str.toCharArray()) {
+            if(Character.isDigit(c)){
+                result += c;      }
+        }
+        return Integer.parseInt(result);
+    }
+
     public static boolean isPalindrome(String str){
         str=str.toLowerCase();
         for (int begin = 0,end = str.length()-1; begin <str.length()/2 ; begin++, end--) {
@@ -281,13 +296,11 @@ public class Runner2 {
         int index = 0;
         for (int i = 0; i < arr.length; i++) {  // move non-zero elements to the front
             if (arr[i] != 0) {
-                arr[index] = arr[i];
-                index++;
+                arr[index++] = arr[i];
             }
         }
         while (index < arr.length) {  // Fill the remaining positions with zeros
-            arr[index] = 0;
-            index++;
+            arr[index++] = 0;
         }
         return arr;
     }
@@ -337,9 +350,10 @@ public class Runner2 {
             System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
             System.out.println(Arrays.toString(removeDuplicatesArray_stream(example)));
 
-            int[] arr2 = {10, 5, 1, 9, 2, 7, 3, 6, 8, 4};
+            int[] arr2 = {10,5,1,9,0,2,0,7,0,3,0,6,8,4};
             bubbleSortArray(arr2);
 
+            System.out.println(Arrays.toString(moveZerosToEnd2(arr2)));
 
 
         }

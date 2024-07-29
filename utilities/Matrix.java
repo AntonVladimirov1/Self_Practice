@@ -31,7 +31,7 @@ public class Matrix {
             }
         }
         if (found){
-            System.out.println("<Success>");
+            System.out.println("'Success'");
         }else {
             System.err.println("Target not found");
         }
