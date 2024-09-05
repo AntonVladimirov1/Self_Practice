@@ -343,17 +343,7 @@ public class Runner2 {
             int randomNumber = random.nextInt(100);   // randomly printing numbers limited to 100
             System.out.println(randomNumber);
 
-            String[] original = {"kuku","vasya","kuku","vasya"};
-            System.out.println(Arrays.toString(removeDuplicatesArray(original)));
-
-            int[] example = {45,8,1,25,32,43,45,1,1,32,25,8};
-            System.out.println(Arrays.toString(removeDuplicatesArray_sort(example)));
-            System.out.println(Arrays.toString(removeDuplicatesArray_stream(example)));
-
-            int[] arr2 = {10,5,1,9,0,2,0,7,0,3,0,6,8,4};
-            bubbleSortArray(arr2);
-
-            System.out.println(Arrays.toString(moveZerosToEnd2(arr2)));
+            System.out.println(FinRa_FizBuzz(-30));
 
 
         }
