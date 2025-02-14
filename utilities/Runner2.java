@@ -14,6 +14,15 @@ public class Runner2 {
     }
     //StringBuilder StrReversed = new StringBuilder("emoclew");
         //System.out.println(StrReversed.reverse());
+    public static String reverseWords (String sentence){
+        String[] words = sentence.split(" ");
+        String reversed = "";
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversed += words[i] + " ";
+        }
+        return reversed.trim();
+     }
+
     public static int reverseInt(int number) {
         boolean isNegative = number < 0;
         if(isNegative){
@@ -344,6 +353,8 @@ public class Runner2 {
             System.out.println(randomNumber);
 
             System.out.println(FinRa_FizBuzz(-30));
+
+            System.out.println(reverseWords("I like QA automation"));
 
 
         }
